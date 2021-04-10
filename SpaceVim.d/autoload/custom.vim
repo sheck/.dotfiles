@@ -8,4 +8,5 @@ function! custom#before() abort
 endfunction
 
 function! custom#after() abort
+  NERDTreeClose
 endfunction

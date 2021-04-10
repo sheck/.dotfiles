@@ -1,2 +1,1 @@
-- Don't open file tree by default
 - Get git co [branch name] autocompletion working 

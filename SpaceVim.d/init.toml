@@ -52,8 +52,7 @@ name = 'fzf'
 
 [[layers]]
 name = 'git'
-[[layers]]
-name = 'VersionControl'
+git-plugin = 'fugitive'
 
 [[layers]]
 name = 'format'

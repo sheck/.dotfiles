@@ -68,3 +68,6 @@ name = "lang#javascript"
 
 [[layers]]
 name = "lang#html"
+
+[[layers]]
+name = "lang#markdown"

@@ -1,0 +1,1 @@
+- Don't open file tree by default

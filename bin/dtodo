@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# `dtodo replace vim colorscheme`
+if [[ $# -gt 0 ]]; then
+  echo "- $*" >> ~/.dotfiles/TODO.md
+  bat ~/.dotfiles/TODO.md
+# `dtodo`
+else
+  $EDITOR ~/.dotfiles/TODO.md
+fi

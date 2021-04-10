@@ -59,11 +59,11 @@ name = 'VersionControl'
 name = 'format'
 
 [[layers]]
+name = "lsp"
+
+[[layers]]
 name = "lang#ruby"
 
 [[layers]]
 name = "lang#javascript"
 auto_fix = true
-
-[[layers]]
-name = "lsp"

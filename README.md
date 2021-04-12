@@ -22,4 +22,4 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 4. Clone secret `dotfiles-local` repo to `~/dotfiles-local`
 5. `brew install rcm` or `sudo apt install rcm`
 6. `rcup`
-7. Open nvim, and run `:CocUpdate` to install the correct extensions
+7. Install coc extensions: `cd ~/.config/coc/extensions && npm i && rm package-lock.json`. You might need to open neovim and run `:CocUpdate` as well.

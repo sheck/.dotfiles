@@ -76,3 +76,5 @@ fi;
 # disable zsh bundled function mtools command mcd
 # which causes a conflict.
 compdef -d mcd
+
+source ~/.zsh/pco.zsh

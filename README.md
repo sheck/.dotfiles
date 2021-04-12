@@ -20,6 +20,6 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
    ```
 3. `cd ~ && git clone https://github.com/sheck/.dotfiles`
 4. Clone secret `dotfiles-local` repo to `~/dotfiles-local`
-5. [Install RCM](https://github.com/thoughtbot/rcm)
+5. `brew install rcm` or `sudo apt install rcm`
 6. `rcup`
 7. Open nvim, and run `:CocUpdate` to install the correct extensions

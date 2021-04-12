@@ -6,7 +6,7 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 
 - zsh needs to be your login shell
    
-   `chsh -s $(which zsh)`
+   `chsh -s $(which zsh)` or `sudo chsh $(whoami) -s $(which zsh)`
 
 - Probably need neovim installed
 

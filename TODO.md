@@ -1,1 +1,0 @@
-- Get git co [branch name] autocompletion working 

@@ -59,6 +59,10 @@ name = 'format'
 
 [[layers]]
 name = "lsp"
+filetypes = [
+  "ruby",
+  "javascript"
+]
 
 [[layers]]
 name = "lang#ruby"

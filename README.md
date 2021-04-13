@@ -23,4 +23,3 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 5. `brew install rcm` or `sudo apt install rcm`
 6. `rcup`
 7. Install coc extensions: `cd ~/.config/coc/extensions && npm i && rm package-lock.json`. You might need to open neovim and run `:CocUpdate` as well.
-8. `npm install -g javascript-typescript-langserver; gem install solargraph`

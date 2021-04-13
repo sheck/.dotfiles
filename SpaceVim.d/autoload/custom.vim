@@ -8,4 +8,7 @@ endfunction
 
 function! custom#after() abort
   NERDTreeClose
+
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gr <Plug>(coc-references)
 endfunction

@@ -71,3 +71,6 @@ name = "lang#html"
 
 [[layers]]
 name = "lang#markdown"
+
+[[layers]]
+name = "lang#slim"

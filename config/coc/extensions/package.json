@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "coc-solargraph": ">=1.2.0",
-    "coc-tsserver": ">=1.7.0"
-  }
-}

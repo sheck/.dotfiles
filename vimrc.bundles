@@ -53,4 +53,6 @@ if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
 endif
 
+Plug 'srcery-colors/srcery-vim'
+
 call plug#end()

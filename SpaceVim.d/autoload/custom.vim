@@ -11,4 +11,8 @@ function! custom#after() abort
 
   nmap <silent> gd <Plug>(coc-definition)
   nmap <silent> gr <Plug>(coc-references)
+
+  " Search for highlighted word
+  vnoremap // y/\V<C-R>"<CR>
+  vnoremap \\ y:vimgrep -Q '<C-R>"' **/* <CR>
 endfunction

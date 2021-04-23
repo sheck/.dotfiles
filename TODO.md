@@ -1,1 +1,0 @@
-- pr into spacevim to make package.json tasks run with `npm run` or `yarn run`

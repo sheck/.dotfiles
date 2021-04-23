@@ -18,8 +18,6 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'AndrewRadev/splitjoin.vim'
 " Plug 'MaxMEllon/vim-jsx-pretty'
-" Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'darthdeus/a.vim'
 " Plug 'dense-analysis/ale'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

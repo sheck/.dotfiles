@@ -20,7 +20,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 " Plug 'MaxMEllon/vim-jsx-pretty'
 " Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'darthdeus/a.vim'
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}

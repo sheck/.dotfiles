@@ -1,5 +1,5 @@
 {
-  "diagnostic.displayByAle": true,
   "solargraph.formatting": true,
+  "solargraph.diagnostics": true,
   "eslint.format.enable": true
 }

@@ -1,16 +1,3 @@
-eval "$(rbenv init -)"
-
-# Ensure dotfiles bin directory is loaded first
-PATH="$HOME/.bin:/usr/local/sbin:$PATH"
-
-# `git mark-safe` (or `mkdir .git/safe`) in the root of repositories you trust
-PATH=".git/safe/../../bin:$PATH"
-
-# Use locally installed versions of npm executables
-PATH=".git/safe/../../node_modules/.bin:$PATH"
-
-export -U PATH
-
 # No arguments: `git status`
 # With arguments: acts like `git`
 g() {
@@ -109,5 +96,18 @@ _load_settings() {
   fi
 }
 _load_settings "$HOME/.zsh/configs"
+
+# Ensure dotfiles bin directory is loaded first
+PATH="$HOME/.bin:/usr/local/sbin:$PATH"
+
+eval "$(rbenv init -)"
+
+# `git mark-safe` (or `mkdir .git/safe`) in the root of repositories you trust
+PATH=".git/safe/../../bin:$PATH"
+
+# Use locally installed versions of npm executables
+PATH=".git/safe/../../node_modules/.bin:$PATH"
+
+export -U PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

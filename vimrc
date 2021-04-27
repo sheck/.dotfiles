@@ -91,6 +91,9 @@ nnoremap <silent> <leader>sc :nohlsearch<cr>
 " Use zz to save files (but only if there were changes)
 nnoremap zz :update<cr>
 
+" Quickly quit splits or vim
+nmap <leader>q :q<cr>
+
 " Use ag in fzf for listing files. Lightning fast and respects .gitignore
 let $FZF_DEFAULT_COMMAND = 'ag --literal --files-with-matches --nocolor --hidden -g ""'
 

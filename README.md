@@ -1,6 +1,6 @@
 # .dotfiles
 
-My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbot/dotfiles) and using the [SpaceVim](https://github.com/SpaceVim/SpaceVim) distribution.
+My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbot/dotfiles).
 
 ## Requirements
 

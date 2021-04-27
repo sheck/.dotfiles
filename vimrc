@@ -83,7 +83,7 @@ nnoremap <C-l> <C-w>l
 
 " Search for highlighted word
 vnoremap // y/\V<C-R>"<CR>
-vnoremap \\ y:Ag -Q '<C-R>"'<CR>
+vnoremap \\ y:Ag <C-R>"<CR>
 
 " Clear search highlighting (mnemonic: search clear)
 nnoremap <silent> <leader>sc :nohlsearch<cr>

@@ -91,6 +91,13 @@ nnoremap <silent> <leader>sc :nohlsearch<cr>
 " Use zz to save files (but only if there were changes)
 nnoremap zz :update<cr>
 
+" Allow :w via map, but make it longer than the update map to discourage using
+" outside of touching a file for guard
+nmap <leader>ww :w<cr>
+
+" Launch guard
+nmap <leader>gu :vsplit term://guard<cr>
+
 " Quickly quit splits or vim
 nmap <leader>q :q<cr>
 

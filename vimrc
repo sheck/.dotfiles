@@ -73,7 +73,7 @@ inoremap <S-Tab> <C-n>
 nnoremap <c-p> :Files<cr>
 
 " Git (vim-fugitive) maps
-nmap <leader>gs :Gstatus<cr>
+nmap <leader>gs :Git<cr>
 
 " Quicker window movement
 nnoremap <C-j> <C-w>j

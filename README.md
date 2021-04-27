@@ -22,4 +22,6 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 4. Clone secret `dotfiles-local` repo to `~/dotfiles-local`
 5. `brew install rcm` or `sudo apt install rcm`
 6. `rcup`
-7. `brew install bat` or `sudo apt install bat && ln -s /usr/bin/batcat ~/.bin/bat`
+
+## Other stuff
+- `brew install bat` or `sudo apt install bat && ln -s /usr/bin/batcat ~/.bin/bat`

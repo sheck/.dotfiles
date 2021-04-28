@@ -44,6 +44,8 @@ Plug 'tpope/vim-surround'
 " Plug 'vim-scripts/YankRing.vim'
 Plug 'yuezk/vim-js'
 
+Plug 'ecomba/vim-ruby-refactoring'
+
 Plug 'janko-m/vim-test'
 
 call plug#end()

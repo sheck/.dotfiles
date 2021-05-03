@@ -93,7 +93,7 @@ nnoremap <leader>w :update<cr>
 
 " Allow :w via map, but make it longer than the update map to discourage using
 " outside of touching a file for guard
-nmap <leader>ww :w<cr>
+nmap <leader>W :w<cr>
 
 " Launch guard
 nmap <leader>gu :vsplit term://guard<cr>

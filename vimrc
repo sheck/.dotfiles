@@ -88,8 +88,8 @@ vnoremap \\ y:Ag <C-R>"<CR>
 " Clear search highlighting (mnemonic: search clear)
 nnoremap <silent> <leader>sc :nohlsearch<cr>
 
-" Use zz to save files (but only if there were changes)
-nnoremap zz :update<cr>
+" Use <leader>w to save files (but only if there were changes)
+nnoremap <leader>w :update<cr>
 
 " Allow :w via map, but make it longer than the update map to discourage using
 " outside of touching a file for guard

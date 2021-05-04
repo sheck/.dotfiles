@@ -25,3 +25,4 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 
 ## Other stuff
 - `brew install bat` or `sudo apt install bat && ln -s /usr/bin/batcat ~/.bin/bat`
+- `brew install watchman` or `sudo apt install watchman` (to get automatic import renaming working with coc-tsserver)

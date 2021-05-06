@@ -110,6 +110,12 @@ nmap <leader>q :q<cr>
 " Use ag in fzf for listing files. Lightning fast and respects .gitignore
 let $FZF_DEFAULT_COMMAND = 'ag --literal --files-with-matches --nocolor --hidden -g ""'
 
+" NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
 " vim-test
 let test#strategy = "neovim"
 nnoremap <silent> <Leader>t :TestFile<CR>

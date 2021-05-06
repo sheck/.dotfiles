@@ -47,5 +47,6 @@ Plug 'yuezk/vim-js'
 Plug 'ecomba/vim-ruby-refactoring'
 Plug 'janko-m/vim-test'
 Plug 'airblade/vim-gitgutter'
+Plug 'preservim/nerdtree'
 
 call plug#end()

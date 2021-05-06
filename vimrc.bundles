@@ -45,7 +45,7 @@ Plug 'tpope/vim-surround'
 Plug 'yuezk/vim-js'
 
 Plug 'ecomba/vim-ruby-refactoring'
-
 Plug 'janko-m/vim-test'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()

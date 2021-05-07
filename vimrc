@@ -107,8 +107,19 @@ nmap <leader>gu :vsplit term://guard<cr>
 " Quickly quit splits or vim
 nmap <leader>q :q<cr>
 
-" Use ag in fzf for listing files. Lightning fast and respects .gitignore
-let $FZF_DEFAULT_COMMAND = 'ag --literal --files-with-matches --nocolor --hidden -g ""'
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in fzf for listing files. Lightning fast and respects .gitignore
+  let $FZF_DEFAULT_COMMAND = 'ag --literal --files-with-matches --nocolor --hidden -g ""'
+
+  if !exists(":Ag")
+    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+    nnoremap \ :Ag<SPACE>
+  endif
+endif
 
 " NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>

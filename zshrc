@@ -100,8 +100,6 @@ _load_settings "$HOME/.zsh/configs"
 # Ensure dotfiles bin directory is loaded first
 PATH="$HOME/.bin:/usr/local/sbin:$PATH"
 
-eval "$(rbenv init -)"
-
 # `git mark-safe` (or `mkdir .git/safe`) in the root of repositories you trust
 PATH=".git/safe/../../bin:$PATH"
 

@@ -25,6 +25,7 @@ Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'pechorin/any-jump.vim'
 " Plug 'samoshkin/vim-mergetool'
@@ -48,5 +49,6 @@ Plug 'ecomba/vim-ruby-refactoring'
 Plug 'janko-m/vim-test'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
+Plug 'honza/vim-snippets'
 
 call plug#end()

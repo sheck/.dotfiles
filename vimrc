@@ -45,6 +45,12 @@ set colorcolumn=+1
 set number
 set numberwidth=5
 
+" Folding
+set foldmethod=syntax
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright

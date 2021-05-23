@@ -52,5 +52,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 Plug 'honza/vim-snippets'
 Plug 'leafgarland/typescript-vim'
+Plug 'mattn/emmet-vim'
 
 call plug#end()

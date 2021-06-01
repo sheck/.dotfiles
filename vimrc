@@ -4,7 +4,7 @@ endif
 
 let mapleader=" "
 
-let g:srcery_transparent_background = 1
+let g:srcery_bg_passthrough = 1
 colorscheme srcery
 
 set backspace=2   " Backspace deletes like most programs in insert mode

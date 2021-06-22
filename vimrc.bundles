@@ -30,6 +30,7 @@ Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'coc-extensions/coc-svelte', {'do': 'yarn install --frozen-lockfile', 'for': 'svelte'}
 Plug 'evanleck/vim-svelte', {'for': 'svelte'}
+Plug 'mustache/vim-mustache-handlebars', {'for': 'html.handlebars'}
 
 Plug 'pechorin/any-jump.vim'
 " Plug 'samoshkin/vim-mergetool'

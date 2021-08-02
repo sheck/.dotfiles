@@ -85,8 +85,8 @@ nnoremap <leader>w :update<cr>
 " outside of touching a file for guard
 nmap <leader>W :w<cr>
 
-" Launch regular terminal
-nmap <leader>rc :new<cr>:terminal<cr>
+" Launch (regular) interactive terminal
+nmap <leader>ri :new<cr>:terminal<cr>
 
 " Launch rails console
 nmap <leader>rc :new term://rails c<cr>

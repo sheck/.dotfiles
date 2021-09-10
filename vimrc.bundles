@@ -27,6 +27,7 @@ Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+Plug 'fannheyward/coc-react-refactor', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'coc-extensions/coc-svelte', {'do': 'yarn install --frozen-lockfile', 'for': 'svelte'}
 Plug 'evanleck/vim-svelte', {'for': 'svelte'}

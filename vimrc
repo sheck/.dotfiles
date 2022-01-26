@@ -94,6 +94,9 @@ nmap <leader>rc :new term://rails c<cr>
 " Launch guard
 nmap <leader>gu :vsplit term://guard<cr>
 
+" Launch rerun for curent file
+nmap <leader>ru :vsplit term://rerun --clear --exit --no-notify bin/rails t %<cr>
+
 " Quickly quit splits or vim
 nmap <leader>q :q<cr>
 

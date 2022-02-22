@@ -94,8 +94,13 @@ nmap <leader>rc :new term://rails c<cr>
 " Launch guard
 nmap <leader>gu :vsplit term://guard<cr>
 
-" Launch rerun for curent file
-nmap <leader>ru :vsplit term://rerun --clear --exit --no-notify bin/rails t %<cr>
+if isdirectory("spec")
+  " Launch rerun for curent file
+  nmap <leader>ru :vsplit term://rerun --clear --exit --no-notify bundle exec rspec %<cr>
+else
+  " Launch rerun for curent file
+  nmap <leader>ru :vsplit term://rerun --clear --exit --no-notify bin/rails t %<cr>
+endif
 
 " Quickly quit splits or vim
 nmap <leader>q :q<cr>

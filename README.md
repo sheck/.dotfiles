@@ -9,6 +9,7 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
    `chsh -s $(which zsh)` or `sudo chsh $(whoami) -s $(which zsh)`
 
 - Probably need neovim installed
+- [Nix package manager](https://nixos.org/download.html)
 
 ## Setup
 
@@ -24,5 +25,5 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 6. `rcup`
 
 ## Other stuff
-- `brew install bat` or `sudo apt install bat && ln -s /usr/bin/batcat ~/.bin/bat`
-- `brew install watchman` or `sudo apt install watchman` (to get automatic import renaming working with coc-tsserver)
+- `nix-env -iA nixpkgs.bat`
+- `nix-env -iA nixpkgs.watchman` (to get automatic import renaming working with coc-tsserver)

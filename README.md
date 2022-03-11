@@ -21,10 +21,5 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
    ```
 3. `cd ~ && git clone https://github.com/sheck/.dotfiles`
 4. Clone secret `dotfiles-local` repo to `~/dotfiles-local`
-5. `brew install rcm` or `sudo apt install rcm`
+5. `nix-env -iA nixpkgs.rcm nixpkgs.sheckPackages`
 6. `rcup`
-
-## Other stuff
-- `nix-env -iA nixpkgs.bat`
-- `nix-env -iA nixpkgs.watchman` (to get automatic import renaming working with coc-tsserver)
-- `nix-env -iA nixpkgs.delta`

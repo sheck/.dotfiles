@@ -15,12 +15,19 @@
   st = status
 [core]
   autocrlf = input
+  pager = delta
 [fetch]
   prune = true
 [rebase]
   autosquash = true
 [include]
   path = ~/.gitconfig.local
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true # use n and N to move between diff sections
+[merge]
+  conflictstyle = diff3
 [diff]
   colorMoved = zebra
 [pull]

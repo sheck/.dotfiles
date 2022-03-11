@@ -27,3 +27,4 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 ## Other stuff
 - `nix-env -iA nixpkgs.bat`
 - `nix-env -iA nixpkgs.watchman` (to get automatic import renaming working with coc-tsserver)
+- `nix-env -iA nixpkgs.delta`

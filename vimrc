@@ -4,8 +4,15 @@ endif
 
 let mapleader=" "
 
+" Must be before theme is used
 let g:srcery_bg_passthrough = 1
-colorscheme srcery
+
+" Use the current terminal theme for Vim colors
+if $USE_LIGHT_BG == "true"
+  colorscheme flattened_light
+else
+  colorscheme srcery
+endif
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set history=50

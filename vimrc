@@ -9,8 +9,10 @@ let g:srcery_bg_passthrough = 1
 
 " Use the current terminal theme for Vim colors
 if $USE_LIGHT_BG == "true"
-  colorscheme flattened_light
+  set background=light
+  colorscheme dim
 else
+  set background=dark
   colorscheme srcery
 endif
 

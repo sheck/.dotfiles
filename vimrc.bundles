@@ -7,7 +7,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'tpope/vim-sensible'
 
 Plug 'srcery-colors/srcery-vim'
-Plug 'romainl/flattened'
+Plug 'jeffkreeftmeijer/vim-dim'
 
 " If fzf has already been installed via Homebrew, use the existing fzf
 " Otherwise, install fzf. The `--all` flag makes fzf accessible outside of vim

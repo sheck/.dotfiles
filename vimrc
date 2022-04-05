@@ -67,7 +67,7 @@ if has("nvim")
 endif
 
 " Map Ctrl + p to open fuzzy find (FZF)
-nnoremap <c-p> :Files<cr>
+nnoremap <c-p> :GFiles<cr>
 
 " Git (vim-fugitive) maps
 nmap <leader>gs :Git<cr>

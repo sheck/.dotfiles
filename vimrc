@@ -105,10 +105,10 @@ nmap <leader>gu :vsplit term://guard<cr>
 
 if isdirectory("spec")
   " Launch rerun for curent file
-  nmap <leader>ru :vsplit term://rerun --background --clear --exit --no-notify --pattern '**/*.{rb,ru}' -- bin/rspec %<cr>
+  nmap <leader>ru :split term://rerun --background --clear --exit --no-notify --pattern '**/*.{rb,ru}' -- bin/rspec %<cr>
 else
   " Launch rerun for curent file
-  nmap <leader>ru :vsplit term://rerun --background --clear --exit --no-notify --pattern '**/*.{rb,ru}' -- bin/rails t %<cr>
+  nmap <leader>ru :split term://rerun --background --clear --exit --no-notify --pattern '**/*.{rb,ru}' -- bin/rails t %<cr>
 endif
 
 " Quickly quit splits or vim

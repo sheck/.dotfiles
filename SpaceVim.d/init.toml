@@ -53,6 +53,7 @@ name = 'VersionControl'
 
 [[layers]]
 name = 'lsp'
+filetypes = ['ruby', 'typescript']
 enabled_clients = ['solargraph']
 
 [[layers]]

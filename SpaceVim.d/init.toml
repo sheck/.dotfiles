@@ -25,6 +25,7 @@
     enable_statusline_mode = false
     bootstrap_before = 'myspacevim#before'
     bootstrap_after = 'myspacevim#after'
+    file_searching_tools = ['ag', 'ag --literal --files-with-matches --nocolor --hidden -g ']
 
 # Enable autocomplete layer
 [[layers]]

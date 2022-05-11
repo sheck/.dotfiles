@@ -52,7 +52,14 @@ git_plugin = 'fugitive'
 name = 'VersionControl'
 
 [[layers]]
+name = 'lsp'
+enabled_clients = ['solargraph']
+
+[[layers]]
 name = "lang#ruby"
 
 [[layers]]
 name = "lang#typescript"
+
+[[layers]]
+name = 'format'

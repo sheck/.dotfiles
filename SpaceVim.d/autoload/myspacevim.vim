@@ -1,6 +1,12 @@
 function! myspacevim#before() abort
-  " let g:srcery_bg_passthrough = 1
-  let g:neoformat_enabled_ruby = ['standard', 'rubocop']
+  " let g:neoformat_ruby_prettier = {
+            " \ 'exe': 'prettier',
+            " \ 'args': ['--stdin-filepath', '"%:p"'],
+            " \ 'stdin': 1,
+            " \ 'try_node_exe': 1,
+            " \ 'env': ["PRETTIER_RUBY_TIMEOUT_MS=1000"],
+            " \ }
+  let g:neoformat_enabled_ruby = ['prettier']
 endfunction
 
 function! myspacevim#after() abort

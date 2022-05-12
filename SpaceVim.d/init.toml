@@ -57,8 +57,8 @@ name = 'VersionControl'
 
 [[layers]]
 name = 'lsp'
-filetypes = ['ruby', 'typescript']
-enabled_clients = ['solargraph']
+filetypes = ['ruby', 'typescript', 'typescriptreact']
+enabled_clients = ['solargraph', 'tsserver']
 
 [[layers]]
 name = "lang#ruby"

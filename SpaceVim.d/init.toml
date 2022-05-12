@@ -26,8 +26,12 @@
     bootstrap_before = 'myspacevim#before'
     bootstrap_after = 'myspacevim#after'
     file_searching_tools = ['ag', 'ag --literal --files-with-matches --nocolor --hidden -g ']
+    disabled_plugins = ['neoformat']
 
-# Enable autocomplete layer
+[[custom_plugins]]
+repo = 'sheck/neoformat-custom'
+merged = false
+
 [[layers]]
 name = 'autocomplete'
 auto_completion_return_key_behavior = "complete"

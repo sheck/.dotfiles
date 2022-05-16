@@ -26,11 +26,6 @@
     bootstrap_before = 'myspacevim#before'
     bootstrap_after = 'myspacevim#after'
     file_searching_tools = ['ag', 'ag --literal --files-with-matches --nocolor --hidden -g ']
-    disabled_plugins = ['neoformat']
-
-[[custom_plugins]]
-repo = 'sheck/neoformat-custom'
-merged = false
 
 [[layers]]
 name = 'autocomplete'

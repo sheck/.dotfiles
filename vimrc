@@ -69,7 +69,7 @@ if has("nvim")
 endif
 
 " Map Ctrl + p to open fuzzy find (FZF)
-nnoremap <c-p> :GFiles<cr>
+nnoremap <c-p> :Files<cr>
 
 " Git (vim-fugitive) maps
 nmap <leader>gs :Git<cr>
@@ -120,7 +120,7 @@ if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor
 
   " Use ag in fzf for listing files. Lightning fast and respects .gitignore
-  let $FZF_DEFAULT_COMMAND = 'ag --literal --files-with-matches --nocolor --hidden -g ""'
+  let $FZF_DEFAULT_COMMAND = 'ag --literal --files-with-matches --nocolor --ignore=".git" --hidden -g ""'
 
   if !exists(":Ag")
     command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!

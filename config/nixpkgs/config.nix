@@ -7,6 +7,7 @@
         watchman
         delta
         silver-searcher
+        rcm
       ];
     };
   };

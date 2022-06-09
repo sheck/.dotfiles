@@ -52,6 +52,7 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # Load/setup autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 [ -f /usr/share/autojump/autojump.sh ] && . /usr/share/autojump/autojump.sh
+[ -f ~/.nix-profile/share/autojump/autojump.zsh ] && . ~/.nix-profile/share/autojump/autojump.zsh
 
 
 # Complettion config

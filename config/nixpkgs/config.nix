@@ -8,6 +8,7 @@
         delta
         silver-searcher
         autojump
+        exa
       ];
     };
   };

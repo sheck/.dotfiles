@@ -179,6 +179,7 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " === vim-coc custom ===
 nmap <leader>f  <Plug>(coc-format)
+nmap <leader>pf  :CocCommand prettier.formatFile<cr>
 
 " === coc-snippets ===
 " Use <C-l> for trigger snippet expand.

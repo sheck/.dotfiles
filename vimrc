@@ -145,6 +145,10 @@ nnoremap <silent> <Leader>gt :TestVisit<CR>
 " Make escape work in terminal
 tnoremap <Esc> <C-\><C-n>
 
+" Setup yanking from ssh
+vnoremap <leader>o :OSCYank<CR>
+nmap <leader>o <Plug>OSCYank
+
 " === vim-coc from readme ===
 
 " Use K to show documentation in preview window.

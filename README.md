@@ -19,7 +19,7 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
      name = Nick Sheck
      email = sheck@users.noreply.github.com
    ```
-3. `cd ~ && git clone git@github.com:sheck/.dotfiles.git`
+3. `cd ~ && git clone --recurse-submodules git@github.com:sheck/.dotfiles.git`
 4. Clone secret `dotfiles-local` repo to `~/dotfiles-local`
 5. `nix-env -iA nixpkgs.rcm`
 6. `rcup`

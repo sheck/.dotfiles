@@ -1,5 +1,6 @@
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 
 brew "git-lfs"
 brew "mas"
@@ -16,7 +17,7 @@ cask "keybase"
 cask "krisp"
 cask "rectangle"
 cask "visual-studio-code"
-cask "zoom"
+cask "iterm2"
 
 mas "Things", id: 904280696
 mas "1Password 7", id: 1333542190

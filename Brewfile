@@ -18,9 +18,9 @@ cask "rectangle"
 cask "visual-studio-code"
 cask "zoom"
 
-mas "Things", id: "904280696"
-mas "1Password 7", id: "1333542190"
-mas "Nordlayer", id: "1488888843"
-mas "Slack", id: "803453959"
-mas "Trello", id: "1278508951"
-mas "Tailscale", id: "1475387142"
+mas "Things", id: 904280696
+mas "1Password 7", id: 1333542190
+mas "Nordlayer", id: 1488888843
+mas "Slack", id: 803453959
+mas "Trello", id: 1278508951
+mas "Tailscale", id: 1475387142

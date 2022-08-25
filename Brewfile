@@ -3,6 +3,7 @@ tap "homebrew/cask"
 brew "git-lfs"
 brew "mas"
 brew "neovim"
+brew "switchaudio-osx"
 
 cask "alfred"
 cask "dash"

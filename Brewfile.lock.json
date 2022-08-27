@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "5a0d5000aa4a11b5b69cb24fb3a9546b5a8ef722"
+        "revision": "528b2002743be3f2ad69c2b715eb2ba13860e24c"
       },
       "homebrew/cask-fonts": {
         "revision": "a8e6cf6d9226d1f0c9d2d0562419d48759e84318"
@@ -220,7 +220,7 @@
         }
       },
       "rectangle": {
-        "version": "0.57,63",
+        "version": "0.58,64",
         "options": {
           "full_name": "rectangle"
         }
@@ -256,7 +256,7 @@
       "Nordlayer": null,
       "Slack": {
         "id": "803453959",
-        "version": "4.27.154"
+        "version": "4.28.171"
       },
       "Trello": {
         "id": "1278508951",
@@ -272,8 +272,8 @@
     "macos": {
       "monterey": {
         "HOMEBREW_VERSION": "3.5.10",
-        "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "8b15c0b93ca323e427483cbeeb1f45b85e514697",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "82afd979f849eb9e8cff323644b780f7fc858cc0",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4",
         "macOS": "12.5.1"

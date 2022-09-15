@@ -1,6 +1,7 @@
+# macOS
 if [[ `uname` == "Darwin" ]]; then
-  # macOS
   export THOR_MERGE=mergetool-for-rails
-elif command apt > /dev/null; then
-  # debian
+elif [[ `uname` == "Linux" ]]; then
+  # linuxbrew
+  eval "$(/home/ubuntu/.linuxbrew/bin/brew shellenv)"
 fi

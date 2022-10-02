@@ -10,6 +10,7 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 
 - Probably need neovim installed
 - [Nix package manager](https://nixos.org/download.html)
+- Homebrew/linuxbrew
 
 ## Setup
 

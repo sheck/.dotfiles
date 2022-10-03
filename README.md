@@ -25,5 +25,7 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 5. `nix-env -iA nixpkgs.rcm`
 6. `rcup`
 7. `nix-env -iA nixpkgs.sheckPackages`
-8. `brew bundle`
-9. `brew bundle --file Brewfile-alt`
+
+## Other (could do this first 🤷‍♂️)
+1. `brew bundle`
+2. `brew bundle --file Brewfile-alt`

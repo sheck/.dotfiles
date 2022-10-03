@@ -1,0 +1,35 @@
+{
+  "entries": {
+    "cask": {
+      "firefox-developer-edition": {
+        "version": "latest",
+        "options": {
+          "full_name": "homebrew/cask-versions/firefox-developer-edition"
+        }
+      }
+    },
+    "mas": {
+      "Nordlayer": null,
+      "Trello": {
+        "id": "1278508951",
+        "version": "2.13.7"
+      },
+      "Tailscale": {
+        "id": "1475387142",
+        "version": "1.30.2"
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "monterey": {
+        "HOMEBREW_VERSION": "3.6.4",
+        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "Homebrew/homebrew-core": "a34439b17df77a05f7cd8f72bcf81c2ff17d6e35",
+        "CLT": "13.4.0.0.1.1651278267",
+        "Xcode": "13.4",
+        "macOS": "12.5.1"
+      }
+    }
+  }
+}

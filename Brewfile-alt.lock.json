@@ -6,6 +6,12 @@
         "options": {
           "full_name": "homebrew/cask-versions/firefox-developer-edition"
         }
+      },
+      "asana": {
+        "version": "1.11.0",
+        "options": {
+          "full_name": "asana"
+        }
       }
     },
     "mas": {
@@ -23,11 +29,11 @@
   "system": {
     "macos": {
       "monterey": {
-        "HOMEBREW_VERSION": "3.6.4",
+        "HOMEBREW_VERSION": "3.6.5",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "a34439b17df77a05f7cd8f72bcf81c2ff17d6e35",
-        "CLT": "13.4.0.0.1.1651278267",
-        "Xcode": "13.4",
+        "Homebrew/homebrew-core": "5fb25bb5e8674bb53fa8837fde24acad40d90503",
+        "CLT": "14.0.0.0.1.1661618636",
+        "Xcode": "14.0.1",
         "macOS": "12.5.1"
       }
     }

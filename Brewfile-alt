@@ -1,4 +1,5 @@
 cask "homebrew/cask-versions/firefox-developer-edition"
+cask "asana"
 
 mas "Nordlayer", id: 1488888843
 mas "Trello", id: 1278508951

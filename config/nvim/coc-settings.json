@@ -3,8 +3,6 @@
   "solargraph.diagnostics": true,
   "solargraph.checkGemVersion": false,
   "eslint.format.enable": true,
-  "javascript.format.enabled": false,
-  "typescript.format.enabled": false,
   "prettier.requireConfig": true,
   "prettier.onlyUseLocalVersion": true,
   "prettier.formatterPriority": -1,

@@ -1,5 +1,5 @@
-cask "homebrew/cask-versions/firefox-developer-edition"
 cask "asana"
+cask "homebrew/cask-versions/firefox-developer-edition"
 
 mas "Nordlayer", id: 1488888843
 mas "Tailscale", id: 1475387142

@@ -17,6 +17,7 @@ cask "iterm2"
 cask "keybase"
 cask "krisp"
 cask "rectangle"
+cask "spotify"
 cask "visual-studio-code"
 
 mas "Slack", id: 803453959

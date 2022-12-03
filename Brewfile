@@ -7,7 +7,6 @@ brew "switchaudio-osx"
 
 cask "alfred"
 cask "dash"
-cask "homebrew/cask-fonts/font-sauce-code-pro-nerd-font"
 cask "hammerspoon"
 cask "hey"
 cask "iterm2"

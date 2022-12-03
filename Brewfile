@@ -7,6 +7,7 @@ brew "switchaudio-osx"
 
 cask "1password"
 cask "alfred"
+cask "arc"
 cask "dash"
 cask "hammerspoon"
 cask "hey"

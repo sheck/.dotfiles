@@ -19,3 +19,4 @@ cask "visual-studio-code"
 
 mas "Slack", id: 803453959
 mas "Things", id: 904280696
+mas "Tailscale", id: 1475387142

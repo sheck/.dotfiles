@@ -9,7 +9,6 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
    `chsh -s $(which zsh)` or `sudo chsh $(whoami) -s $(which zsh)`
 
 - Probably need neovim installed
-- [Nix package manager](https://nixos.org/download.html)
 - Homebrew/linuxbrew
 
 ## Setup
@@ -22,10 +21,10 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
    ```
 3. `cd ~ && git clone --recurse-submodules git@github.com:sheck/.dotfiles.git`
 4. Clone secret `dotfiles-local` repo to `~/dotfiles-local`
-5. `nix-env -iA nixpkgs.rcm`
+5. `brew bundle`
 6. `rcup`
-7. `nix-env -iA nixpkgs.sheckPackages`
 
-## Other (could do this first 🤷‍♂️)
-1. `brew bundle`
+### macOS
+
+1. `brew bundle --file Brewfile-macos`
 2. `brew bundle --file Brewfile-alt`

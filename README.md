@@ -23,6 +23,7 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 4. Clone secret `dotfiles-local` repo to `~/dotfiles-local`
 5. `brew bundle`
 6. `rcup`
+7. `yarn global add git-mob`
 
 ### macOS
 

@@ -22,6 +22,8 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 " Plug 'dense-analysis/ale'
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}

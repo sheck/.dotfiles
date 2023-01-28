@@ -8,8 +8,6 @@ if [[ -f "//home/linuxbrew/.linuxbrew/bin/brew" ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
-eval "$(rbenv init -)"
-
 # `git mark-safe` (or `mkdir .git/safe`) in the root of repositories you trust
 PATH=".git/safe/../../bin:$PATH"
 

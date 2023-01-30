@@ -1,1 +1,1 @@
-- get solargraph using the right local version of rubocop
+- use the brew prefix thing

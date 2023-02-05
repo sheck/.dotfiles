@@ -8,7 +8,8 @@ if [[ -f "//home/linuxbrew/.linuxbrew/bin/brew" ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
-[ -d "$HOME/.asdf" ] || eval ". $(brew --prefix asdf)/libexec/asdf.sh"
+# If we're not using the git version, load via brew
+[ ! -f "$HOME/.asdf/asdf.sh" ] && eval ". $(brew --prefix asdf)/libexec/asdf.sh"
 
 # `git mark-safe` (or `mkdir .git/safe`) in the root of repositories you trust
 PATH=".git/safe/../../bin:$PATH"

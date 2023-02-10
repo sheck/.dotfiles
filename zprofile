@@ -11,6 +11,8 @@ fi
 # If we're not using the git version, load via brew
 [ ! -f "$HOME/.asdf/asdf.sh" ] && eval ". $(brew --prefix asdf)/libexec/asdf.sh"
 
+[ -x "$(command -v rbenv)" ] && eval "$(rbenv init -)"
+
 # `git mark-safe` (or `mkdir .git/safe`) in the root of repositories you trust
 PATH=".git/safe/../../bin:$PATH"
 

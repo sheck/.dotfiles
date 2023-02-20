@@ -4,6 +4,7 @@
   "prettier.formatterPriority": -1,
   "prettier.onlyUseLocalVersion": true,
   "prettier.requireConfig": true,
+  "react-refactor.produceClass": false,
   "solargraph.checkGemVersion": false,
   "solargraph.diagnostics": true,
   "solargraph.formatting": true,

@@ -1,10 +1,12 @@
 {
-  "solargraph.formatting": true,
-  "solargraph.diagnostics": true,
-  "solargraph.checkGemVersion": false,
   "eslint.format.enable": true,
   "javascript.format.enabled": false,
-  "typescript.format.enabled": false,
+  "prettier.formatterPriority": -1,
+  "prettier.onlyUseLocalVersion": true,
   "prettier.requireConfig": true,
-  "svelte.enable-ts-plugin": true
+  "solargraph.checkGemVersion": false,
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true,
+  "svelte.enable-ts-plugin": true,
+  "typescript.format.enabled": false
 }

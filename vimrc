@@ -101,7 +101,7 @@ nmap <leader>ri :new<cr>:terminal<cr>
 nmap <leader>rc :new term://rails c<cr>
 
 " Launch guard
-nmap <leader>gu :vsplit term://guard<cr>
+nmap <leader>gu :split term://bundle exec guard<cr>
 
 if isdirectory("spec")
   " Launch rerun for curent file

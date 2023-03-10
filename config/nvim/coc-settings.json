@@ -6,6 +6,5 @@
   "javascript.format.enabled": false,
   "typescript.format.enabled": false,
   "prettier.requireConfig": true,
-  "prettier.formatterPriority": -1,
   "svelte.enable-ts-plugin": true
 }

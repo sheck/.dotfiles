@@ -146,8 +146,10 @@ nnoremap <silent> <Leader>gt :TestVisit<CR>
 tnoremap <Esc> <C-\><C-n>
 
 " Setup yanking from ssh
-vnoremap <leader>o :OSCYank<CR>
-nmap <leader>o <Plug>OSCYank
+nmap <leader>c <Plug>OSCYankOperator
+nmap <leader>cc <leader>c_
+vmap <leader>c <Plug>OSCYankVisual
+
 
 " === vim-coc from readme ===
 

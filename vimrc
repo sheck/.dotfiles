@@ -68,6 +68,8 @@ if has("nvim")
   set inccommand=nosplit " show substitutions incrementally
 endif
 
+filetype plugin indent on
+
 " Map Ctrl + p to open fuzzy find (FZF)
 nnoremap <c-p> :Files<cr>
 

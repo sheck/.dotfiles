@@ -67,6 +67,8 @@ Plug 'honza/vim-snippets'
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
 
+Plug 'preservim/vim-pencil'
+
 Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()

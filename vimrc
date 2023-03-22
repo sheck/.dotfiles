@@ -152,6 +152,12 @@ nmap <leader>c <Plug>OSCYankOperator
 nmap <leader>cc <leader>c_
 vmap <leader>c <Plug>OSCYankVisual
 
+" vim-pencil
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init({'wrap': 'soft'})
+  autocmd FileType text         call pencil#init()
+augroup END
 
 " === vim-coc from readme ===
 

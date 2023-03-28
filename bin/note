@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+
+require 'bundler/inline'
+require 'date'
+
+gemfile do
+  source 'https://rubygems.org'
+  gem 'thor', '~> 1.2'
+end
+
+class NoteCLI < Thor
+  def self.exit_on_failure?
+    true
+  end
+
+  default_task :new
+
+  desc 'new [NAME]', 'Create a new note, optionally providing the [NAME] (filename without extension)'
+  def new(filename = nil)
+    validate!
+    filename ||= ask 'What should the file be named?', default: "daily/#{Date.today}"
+    open_note_named filename
+  end
+
+  desc 'd', 'Open daily note'
+  def d
+    validate!
+    open_note_named Date.today.to_s
+  end
+
+  private
+
+  def validate!
+    raise 'NOTE_DIRECTORY env var must be set' unless ENV['NOTE_DIRECTORY']
+  end
+
+  def open_note_named(filename)
+    system "$EDITOR \"#{ENV['NOTE_DIRECTORY']}/#{filename}.md\""
+  end
+end
+
+NoteCLI.start

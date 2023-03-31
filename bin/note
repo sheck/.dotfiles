@@ -43,7 +43,7 @@ class NoteCLI < Thor
   end
 
   def open_note_named(filename)
-    system "$EDITOR \"#{ENV['NOTE_DIRECTORY']}/#{filename}.md\""
+    system "cd \"#{ENV['NOTE_DIRECTORY']}\" && $EDITOR \"#{filename}.md\""
   end
 end
 

@@ -22,8 +22,9 @@ class NoteCLI < Thor
     open_note_named filename
   end
 
-  desc 'd', 'Open daily note'
-  def d
+  desc 'daily, d', 'Open daily note'
+  map 'd' => 'daily'
+  def daily
     validate!
     open_note_named Date.today.to_s
   end

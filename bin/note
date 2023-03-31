@@ -29,6 +29,13 @@ class NoteCLI < Thor
     open_note_named Date.today.to_s
   end
 
+  desc 'open, o', 'Open the notes directory in $EDITOR'
+  map 'o' => 'open'
+  def open
+    validate!
+    system "cd \"#{ENV['NOTE_DIRECTORY']}\" && $EDITOR ."
+  end
+
   private
 
   def validate!

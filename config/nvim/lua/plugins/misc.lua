@@ -16,6 +16,7 @@ return {
   { "tpope/vim-rails" },
 
   { import = "lazyvim.plugins.extras.test.core" },
+  { import = "lazyvim.plugins.extras.dap.core" },
 
   -- {
   --   "vim-test/vim-test",

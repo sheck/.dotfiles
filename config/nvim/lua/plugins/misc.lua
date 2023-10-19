@@ -15,14 +15,16 @@ return {
 
   { "tpope/vim-rails" },
 
-  {
-    "vim-test/vim-test",
-    keys = {
-      { "<leader>tr", "<cmd>TestNearest<cr>", desc = "Test nearest" },
-      { "<leader>tt", "<cmd>TestFile<cr>", desc = "Test file" },
-      { "<leader>tT", "<cmd>TestSuite<cr>", desc = "Test suite" },
-      { "<leader>tl", "<cmd>TestLast<cr>", desc = "Test last" },
-      { "<leader>tg", "<cmd>TestVisit<cr>", desc = "Test visit" },
-    },
-  },
+  { import = "lazyvim.plugins.extras.test.core" },
+
+  -- {
+  --   "vim-test/vim-test",
+  --   keys = {
+  --     { "<leader>tr", "<cmd>TestNearest<cr>", desc = "Test nearest" },
+  --     { "<leader>tt", "<cmd>TestFile<cr>", desc = "Test file" },
+  --     { "<leader>tT", "<cmd>TestSuite<cr>", desc = "Test suite" },
+  --     { "<leader>tl", "<cmd>TestLast<cr>", desc = "Test last" },
+  --     { "<leader>tg", "<cmd>TestVisit<cr>", desc = "Test visit" },
+  --   },
+  -- },
 }

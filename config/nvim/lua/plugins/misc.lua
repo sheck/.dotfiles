@@ -22,6 +22,15 @@ return {
   { import = "lazyvim.plugins.extras.test.core" },
   { import = "lazyvim.plugins.extras.dap.core" },
 
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        ruby = { "rubocop", "prettier" },
+      },
+    },
+  },
+
   -- {
   --   "vim-test/vim-test",
   --   keys = {

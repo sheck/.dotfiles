@@ -14,6 +14,10 @@ return {
   },
 
   { "tpope/vim-rails" },
+  -- For a better blame ui
+  { "tpope/vim-fugitive" },
+  -- For :GBrowse
+  { "tpope/vim-rhubarb" },
 
   { import = "lazyvim.plugins.extras.test.core" },
   { import = "lazyvim.plugins.extras.dap.core" },

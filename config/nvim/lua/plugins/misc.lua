@@ -2,13 +2,21 @@
 
 return {
   {
-    "echasnovski/mini.splitjoin",
-    opts = {
-      -- Use mappings from splitjoin.nvim to deconflict with flash.nvim
-      mappings = {
-        toggle = "",
-        split = "g,",
-        join = "gj",
+    "Wansmer/treesj",
+    keys = {
+      {
+        "gj",
+        function()
+          require("treesj").join()
+        end,
+        desc = "Join code block",
+      },
+      {
+        "g,",
+        function()
+          require("treesj").split()
+        end,
+        desc = "Split code block",
       },
     },
   },

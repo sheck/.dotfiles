@@ -110,6 +110,17 @@ return {
           -- end,
         },
       },
+      watch = {
+        enabled = true,
+        symbol_queries = {
+          ruby = [[
+                  (call
+                    method: (identifier) @_ (#match? @_ "^(describe|context)")
+                    arguments: (argument_list (constant) @symbol )
+                  )
+          ]],
+        },
+      },
     },
   },
 }

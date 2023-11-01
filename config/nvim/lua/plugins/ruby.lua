@@ -98,16 +98,16 @@ return {
       "olimorris/neotest-rspec",
     },
     opts = {
+      -- log_level = "debug",
       adapters = {
         ["neotest-rspec"] = {
-          -- NOTE: By default neotest-rspec uses the system wide rspec gem instead of the one through bundler
-          -- rspec_cmd = function()
-          --   return vim.tbl_flatten({
-          --     "bundle",
-          --     "exec",
-          --     "rspec",
-          --   })
-          -- end,
+          -- NOTE: without overriding like below, it will use bundle exec instead of local
+          -- binstubs (and thus, ignoring spring)
+          rspec_cmd = function()
+            return vim.tbl_flatten({
+              "rspec",
+            })
+          end,
         },
       },
       watch = {

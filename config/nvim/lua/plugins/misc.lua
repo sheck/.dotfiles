@@ -53,5 +53,8 @@ return {
   --     { "<leader>tl", "<cmd>TestLast<cr>", desc = "Test last" },
   --     { "<leader>tg", "<cmd>TestVisit<cr>", desc = "Test visit" },
   --   },
+  --   init = function()
+  --     vim.cmd("let test#strategy = 'neovim'")
+  --   end,
   -- },
 }

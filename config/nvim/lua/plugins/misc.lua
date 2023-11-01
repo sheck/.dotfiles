@@ -1,5 +1,7 @@
 -- Plugins that don't need to be in their own file just yet
 
+vim.g.autoformat = false
+
 return {
   {
     "Wansmer/treesj",
@@ -35,6 +37,9 @@ return {
     opts = {
       formatters_by_ft = {
         ruby = { "rubocop", "prettier" },
+      },
+      format = {
+        async = true,
       },
     },
   },

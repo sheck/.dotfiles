@@ -123,7 +123,13 @@ return {
       },
     },
     keys = {
-      { "<leader>ta", function() require("neotest").run.attach() end, desc = "Attach to current test" },
-    }
+      {
+        "<leader>ta",
+        function()
+          require("neotest").run.attach()
+        end,
+        desc = "Attach to current test",
+      },
+    },
   },
 }

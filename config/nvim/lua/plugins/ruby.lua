@@ -96,6 +96,7 @@ return {
     optional = true,
     dependencies = {
       "olimorris/neotest-rspec",
+      "zidhuss/neotest-minitest",
     },
     opts = {
       -- log_level = "debug",
@@ -109,6 +110,7 @@ return {
             })
           end,
         },
+        "neotest-minitest",
       },
       watch = {
         enabled = true,

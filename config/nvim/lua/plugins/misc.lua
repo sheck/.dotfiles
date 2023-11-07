@@ -44,6 +44,18 @@ return {
     },
   },
 
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      diagnostics = {
+        -- ruby-lsp underlines entire blocks (or classes!) when there are
+        -- rubocop violations and changes the color. Disable to make the editor
+        -- less annoying when editing older files.
+        underline = false,
+      },
+    },
+  },
+
   -- {
   --   "vim-test/vim-test",
   --   keys = {

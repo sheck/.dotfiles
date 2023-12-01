@@ -53,6 +53,9 @@ return {
         -- less annoying when editing older files.
         underline = false,
       },
+      servers = {
+        emmet_language_server = {},
+      },
     },
   },
 

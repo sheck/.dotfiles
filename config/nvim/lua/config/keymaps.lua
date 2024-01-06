@@ -3,10 +3,3 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("v", "//", 'y/\\V<C-R>"<cr>', { desc = "Search buffer for highlighted text" })
-
--- vim.api.nvim_set_keymap(
---   "n",
---   "<leader>tw",
---   "<cmd>lua require('neotest').run.run({ jestCommand = 'jest --watch ' })<cr>",
---   {}
--- )

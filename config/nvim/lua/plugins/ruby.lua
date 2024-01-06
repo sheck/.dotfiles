@@ -111,6 +111,7 @@ return {
           end,
         },
         "neotest-minitest",
+        "neotest-jest",
       },
       watch = {
         enabled = true,

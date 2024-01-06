@@ -23,6 +23,12 @@ return {
     },
   },
 
+  { "nvim-neotest/neotest-jest" },
+  -- {
+  --   "nvim-neotest/neotest",
+  --   opts = { adapters = { "neotest-jest" } },
+  -- },
+
   { "tpope/vim-rails" },
   -- For a better blame ui
   { "tpope/vim-fugitive" },

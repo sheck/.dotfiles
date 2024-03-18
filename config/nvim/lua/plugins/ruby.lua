@@ -91,6 +91,8 @@ return {
   },
   {
     "nvim-neotest/neotest",
+    -- Known good sha before breaking issue on 10/20/23
+    commit = "455155f65e3397022a7b23cc3e152b43a6fc5d23",
     optional = true,
     dependencies = {
       "olimorris/neotest-rspec",

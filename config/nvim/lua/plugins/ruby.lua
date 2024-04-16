@@ -64,7 +64,6 @@ return {
     "neovim/nvim-lspconfig",
     dependencies = {
       "Shopify/ruby-lsp",
-      tag = "v0.14.6",
       -- Hook up the pre nvim v10 fix
       init = function()
         require("lazyvim.util").lsp.on_attach(function(client, buffer)

@@ -57,6 +57,7 @@ return {
       },
       servers = {
         emmet_language_server = {},
+        svelte = {},
       },
     },
   },

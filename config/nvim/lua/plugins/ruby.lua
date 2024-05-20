@@ -89,56 +89,57 @@ return {
       end,
     },
   },
-  {
-    "nvim-neotest/neotest",
-    optional = true,
-    dependencies = {
-      "olimorris/neotest-rspec",
-      "zidhuss/neotest-minitest",
-    },
-    opts = {
-      -- log_level = "debug",
-      adapters = {
-        ["neotest-rspec"] = {
-          -- NOTE: without overriding like below, it will use bundle exec instead of local
-          -- binstubs (and thus, ignoring spring)
-          rspec_cmd = function()
-            return vim.tbl_flatten({
-              "rspec",
-            })
-          end,
-        },
-        "neotest-minitest",
-      },
-      watch = {
-        enabled = true,
-        symbol_queries = {
-          ruby = [[
-            ;query
-            ;rspec - class name
-            (call
-              method: (identifier) @_ (#match? @_ "^(describe|context)")
-              arguments: (argument_list (constant) @symbol )
-            )
-            ;rspec - namespaced class name
-            (call
-              method: (identifier)
-              arguments: (argument_list
-                (scope_resolution
-                  name: (constant) @symbol))
-            )
-          ]],
-        },
-      },
-    },
-    keys = {
-      {
-        "<leader>ta",
-        function()
-          require("neotest").run.attach()
-        end,
-        desc = "Attach to current test",
-      },
-    },
-  },
+  -- {
+  --   "nvim-neotest/neotest",
+  --   optional = true,
+  --   dependencies = {
+  --     "olimorris/neotest-rspec",
+  --     "zidhuss/neotest-minitest",
+  --   },
+  --   opts = {
+  --     -- ~/.local/state/nvim/neotest.log
+  --     -- log_level = "debug",
+  --     adapters = {
+  --       ["neotest-rspec"] = {
+  --         -- NOTE: without overriding like below, it will use bundle exec instead of local
+  --         -- binstubs (and thus, ignoring spring)
+  --         rspec_cmd = function()
+  --           return vim.tbl_flatten({
+  --             "rspec",
+  --           })
+  --         end,
+  --       },
+  --       "neotest-minitest",
+  --     },
+  --     watch = {
+  --       enabled = true,
+  --       symbol_queries = {
+  --         ruby = [[
+  --           ;query
+  --           ;rspec - class name
+  --           (call
+  --             method: (identifier) @_ (#match? @_ "^(describe|context)")
+  --             arguments: (argument_list (constant) @symbol )
+  --           )
+  --           ;rspec - namespaced class name
+  --           (call
+  --             method: (identifier)
+  --             arguments: (argument_list
+  --               (scope_resolution
+  --                 name: (constant) @symbol))
+  --           )
+  --         ]],
+  --       },
+  --     },
+  --   },
+  --   keys = {
+  --     {
+  --       "<leader>ta",
+  --       function()
+  --         require("neotest").run.attach()
+  --       end,
+  --       desc = "Attach to current test",
+  --     },
+  --   },
+  -- },
 }

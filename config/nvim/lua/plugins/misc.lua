@@ -31,7 +31,7 @@ return {
 
   { "slim-template/vim-slim" },
 
-  { import = "lazyvim.plugins.extras.test.core" },
+  -- { import = "lazyvim.plugins.extras.test.core" },
   -- { import = "lazyvim.plugins.extras.dap.core" },
   { import = "lazyvim.plugins.extras.lang.typescript" },
 
@@ -63,17 +63,31 @@ return {
     },
   },
 
+  {
+    "vim-test/vim-test",
+    keys = {
+      { "<leader>tr", "<cmd>TestNearest<cr>", desc = "Test nearest" },
+      { "<leader>tt", "<cmd>TestFile<cr>", desc = "Test file" },
+      { "<leader>tT", "<cmd>TestSuite<cr>", desc = "Test suite" },
+      { "<leader>tl", "<cmd>TestLast<cr>", desc = "Test last" },
+      { "<leader>tg", "<cmd>TestVisit<cr>", desc = "Test visit" },
+    },
+    init = function()
+      vim.cmd("let test#strategy = 'neovim_sticky'")
+    end,
+  },
+
   -- {
-  --   "vim-test/vim-test",
-  --   keys = {
-  --     { "<leader>tr", "<cmd>TestNearest<cr>", desc = "Test nearest" },
-  --     { "<leader>tt", "<cmd>TestFile<cr>", desc = "Test file" },
-  --     { "<leader>tT", "<cmd>TestSuite<cr>", desc = "Test suite" },
-  --     { "<leader>tl", "<cmd>TestLast<cr>", desc = "Test last" },
-  --     { "<leader>tg", "<cmd>TestVisit<cr>", desc = "Test visit" },
+  --   "nvim-neotest/neotest",
+  --   optional = true,
+  --   dependencies = {
+  --     "vim-test/vim-test",
+  --     "nvim-neotest/neotest-vim-test",
   --   },
-  --   init = function()
-  --     vim.cmd("let test#strategy = 'neovim'")
-  --   end,
+  --   opts = {
+  --     -- ~/.local/state/nvim/neotest.log
+  --     log_level = "debug",
+  --     adapters = { "neotest-vim-test" },
+  --   },
   -- },
 }

@@ -16,7 +16,7 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 6. `brew bundle`
 7. `chsh -s $(which zsh)` or `sudo chsh $(whoami) -s $(which zsh)` (Ubuntu)
 8. `rcup`
-9. `yarn global add git-mob`
+9. `npm i -g git-mob`
 
 ### macOS
 

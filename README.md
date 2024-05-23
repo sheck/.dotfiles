@@ -2,15 +2,6 @@
 
 My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbot/dotfiles).
 
-## Requirements
-
-- zsh needs to be your login shell
-   
-   `chsh -s $(which zsh)` or `sudo chsh $(whoami) -s $(which zsh)`
-
-- Probably need neovim installed
-- Homebrew/linuxbrew
-
 ## Setup
 
 1. `vim ~/.gitconfig.local`
@@ -21,9 +12,11 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
    ```
 3. `cd ~ && git clone --recurse-submodules git@github.com:sheck/.dotfiles.git`
 4. Clone secret `dotfiles-local` repo to `~/dotfiles-local`
-5. `brew bundle`
-6. `rcup`
-7. `yarn global add git-mob`
+5. Install homebrew (prepend `NONINTERACTIVE=1` when installing on Ubuntu)
+6. `brew bundle`
+7. `chsh -s $(which zsh)` or `sudo chsh $(whoami) -s $(which zsh)` (Ubuntu)
+8. `rcup`
+9. `yarn global add git-mob`
 
 ### macOS
 

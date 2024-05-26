@@ -57,6 +57,7 @@ return {
         -- less annoying when editing older files.
         underline = false,
       },
+      document_highlight = { enabled = false },
       servers = {
         emmet_language_server = {},
         svelte = {},

@@ -20,10 +20,10 @@ dirty_branch_marker() {
   [[ $(git status --porcelain 2> /dev/null) ]] && echo " %{$fg_bold[red]%}✗%{$reset_color%}"
 }
 git_initials() {
-  # local initials=$(git mob-print --initials)
-  # if [[ -n "${initials}" ]]; then
-  #   echo " [${initials}]"
-  # fi
+  local initials=$(git mob-print --initials)
+  if [[ -n "${initials}" ]]; then
+    echo " [${initials}]"
+  fi
 }
 git_prompt_info() {
   current_branch=$(git current-branch 2> /dev/null)

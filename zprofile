@@ -13,6 +13,8 @@ fi
 
 # [ -x "$(command -v rbenv)" ] && eval "$(rbenv init -)"
 
+eval "$(devbox global shellenv --init-hook)"
+
 # `git mark-safe` (or `mkdir .git/safe`) in the root of repositories you trust
 PATH=".git/safe/../../bin:$PATH"
 

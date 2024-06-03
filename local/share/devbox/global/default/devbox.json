@@ -4,8 +4,7 @@
     "nodejs@20",
     "git-lfs@latest",
     "ag@latest",
-    "ruby@3.3",
-    "awscli2@latest"
+    "ruby@3.3"
   ],
   "env": {
     "DEVBOX_COREPACK_ENABLED": "true"

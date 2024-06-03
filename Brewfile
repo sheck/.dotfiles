@@ -1,7 +1,6 @@
 brew "rcm"
 brew "git-lfs"
 brew "neovim"
-brew "asdf"
 
 brew "bat"
 brew "watchman"

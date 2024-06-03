@@ -1,7 +1,6 @@
 tap "homebrew/cask"
 
 brew "mas"
-brew "switchaudio-osx"
 
 cask "1password"
 cask "alfred"
@@ -9,7 +8,6 @@ cask "arc"
 cask "dash"
 cask "hammerspoon"
 cask "hey"
-cask "homebrew/cask-drivers/sonos"
 cask "iterm2"
 cask "keybase"
 cask "krisp"

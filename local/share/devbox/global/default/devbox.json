@@ -3,7 +3,8 @@
   "packages": [
     "nodejs@20",
     "git-lfs@latest",
-    "ag@latest"
+    "ag@latest",
+    "ruby@3.3"
   ],
   "env": {
     "DEVBOX_COREPACK_ENABLED": "true"

@@ -39,10 +39,9 @@ return {
   {
     "stevearc/conform.nvim",
     opts = {
-      formatters_by_ft = {
-        ruby = { "rubocop", "prettier" },
-      },
       format = {
+        -- Async true because autoformat is disabled and this only happens on
+        -- manual invocation
         async = true,
       },
     },

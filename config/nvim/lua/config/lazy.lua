@@ -19,6 +19,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.yaml" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.coding.luasnip" },
+    { import = "lazyvim.plugins.extras.coding.mini-surround" },
     -- import/override with your plugins
     { import = "plugins" },
   },

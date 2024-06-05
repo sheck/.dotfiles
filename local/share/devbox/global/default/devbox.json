@@ -5,7 +5,8 @@
     "git-lfs@latest",
     "ag@latest",
     "ruby@3.3",
-    "ripgrep@latest"
+    "ripgrep@latest",
+    "nodePackages.typescript-language-server@latest"
   ],
   "env": {
     "DEVBOX_COREPACK_ENABLED": "true"

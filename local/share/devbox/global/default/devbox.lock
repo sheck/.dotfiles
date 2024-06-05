@@ -55,6 +55,54 @@
         }
       }
     },
+    "nodePackages.typescript-language-server@latest": {
+      "last_modified": "2024-05-22T06:18:38Z",
+      "resolved": "github:NixOS/nixpkgs/3f316d2a50699a78afe5e77ca486ad553169061e#nodePackages.typescript-language-server",
+      "source": "devbox-search",
+      "version": "4.3.3",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/zmg54bdhskiwbc2zqkdvp2hly5xwyj72-typescript-language-server-4.3.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/zmg54bdhskiwbc2zqkdvp2hly5xwyj72-typescript-language-server-4.3.3"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/jhlj2jvxf5k6lfsxb6lc9ph5mvz8zx8i-typescript-language-server-4.3.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/jhlj2jvxf5k6lfsxb6lc9ph5mvz8zx8i-typescript-language-server-4.3.3"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ijfi2g4awiirr9jakrvnxzgykh874akn-typescript-language-server-4.3.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ijfi2g4awiirr9jakrvnxzgykh874akn-typescript-language-server-4.3.3"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6fbckxdgna7jqz9asmhyk3nqwnnamaka-typescript-language-server-4.3.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/6fbckxdgna7jqz9asmhyk3nqwnnamaka-typescript-language-server-4.3.3"
+        }
+      }
+    },
     "nodejs@20": {
       "last_modified": "2024-05-22T06:18:38Z",
       "plugin_version": "0.0.2",

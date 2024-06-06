@@ -117,6 +117,8 @@ PATH=".git/safe/../../bin:$PATH"
 # Use locally installed versions of npm executables
 PATH=".git/safe/../../node_modules/.bin:$PATH"
 
+PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
 export -U PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

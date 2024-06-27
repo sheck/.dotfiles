@@ -31,9 +31,6 @@ return {
 
   { "slim-template/vim-slim" },
 
-  -- { import = "lazyvim.plugins.extras.test.core" },
-  -- { import = "lazyvim.plugins.extras.dap.core" },
-
   -- { import = "lazyvim.plugins.extras.coding.copilot" },
   { import = "lazyvim.plugins.extras.coding.copilot-chat" },
 
@@ -51,13 +48,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      diagnostics = {
-        -- ruby-lsp underlines entire blocks (or classes!) when there are
-        -- rubocop violations and changes the color. Disable to make the editor
-        -- less annoying when editing older files.
-        underline = false,
-      },
-      document_highlight = { enabled = false },
       servers = {
         emmet_language_server = {},
         svelte = {},
@@ -78,18 +68,4 @@ return {
       vim.cmd("let test#strategy = 'neovim_sticky'")
     end,
   },
-
-  -- {
-  --   "nvim-neotest/neotest",
-  --   optional = true,
-  --   dependencies = {
-  --     "vim-test/vim-test",
-  --     "nvim-neotest/neotest-vim-test",
-  --   },
-  --   opts = {
-  --     -- ~/.local/state/nvim/neotest.log
-  --     log_level = "debug",
-  --     adapters = { "neotest-vim-test" },
-  --   },
-  -- },
 }

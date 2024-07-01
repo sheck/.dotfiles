@@ -23,3 +23,4 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 1. `cd excluded_assets`
 2. `brew bundle --file Brewfile-macos`
 3. `brew bundle --file Brewfile-alt`
+4. `cp excluded_assets/OfficeCO2.jsx ~/Library/Application\ Support/Übersicht/widgets`

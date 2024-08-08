@@ -37,7 +37,7 @@ return {
   {
     "stevearc/conform.nvim",
     opts = {
-      format = {
+      default_format_opts = {
         -- Async true because autoformat is disabled and this only happens on
         -- manual invocation
         async = true,

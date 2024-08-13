@@ -46,6 +46,9 @@ alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 
 alias gitblank="git init && git commit --allow-empty -m 'Init'"
 
+alias ds="devbox shell"
+alias dr="devbox run"
+
 # Better history
 # Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
 autoload -U up-line-or-beginning-search

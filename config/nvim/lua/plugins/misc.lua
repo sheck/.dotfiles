@@ -2,9 +2,6 @@
 
 vim.g.autoformat = false
 
--- vim.g["test#neovim#start_normal"] = 1
--- vim.g["test#preserve_screen"] = 0
-
 return {
   {
     "Wansmer/treesj",
@@ -68,7 +65,7 @@ return {
       { "<leader>tg", "<cmd>TestVisit<cr>", desc = "Test visit" },
     },
     init = function()
-      vim.cmd("let test#strategy = 'neovim'")
+      vim.cmd("let test#strategy = 'neovim_sticky'")
     end,
   },
 }

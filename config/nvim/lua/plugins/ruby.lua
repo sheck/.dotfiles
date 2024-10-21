@@ -14,10 +14,7 @@ return {
     dependencies = { "Shopify/ruby-lsp" },
     opts = {
       servers = {
-        -- _don't_ install with mason as that causes gem install errors when
-        -- launching nvim after the initial install
         ruby_lsp = {
-          mason = false,
           init_options = {
             linters = { "rubocop" },
           },

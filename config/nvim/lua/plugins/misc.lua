@@ -34,9 +34,6 @@ return {
 
   { "slim-template/vim-slim" },
 
-  -- { import = "lazyvim.plugins.extras.coding.copilot" },
-  { import = "lazyvim.plugins.extras.ai.copilot-chat" },
-
   {
     "stevearc/conform.nvim",
     opts = {

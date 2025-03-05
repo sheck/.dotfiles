@@ -22,6 +22,9 @@ return {
             linters = { "rubocop" },
           },
         },
+        syntax_tree = {
+          mason = false,
+        },
       },
     },
   },

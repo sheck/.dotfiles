@@ -32,8 +32,6 @@ return {
   -- For :GBrowse
   { "tpope/vim-rhubarb" },
 
-  { "slim-template/vim-slim" },
-
   {
     "stevearc/conform.nvim",
     opts = {

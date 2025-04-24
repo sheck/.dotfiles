@@ -33,13 +33,6 @@ return {
   { "tpope/vim-rhubarb" },
 
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    opts = {
-      model = "claude-3.7-sonnet-thought",
-    },
-  },
-
-  {
     "stevearc/conform.nvim",
     opts = {
       default_format_opts = {

@@ -11,6 +11,14 @@ return {
   { "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
 
   {
+    "greggh/claude-code.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("claude-code").setup()
+    end,
+  },
+
+  {
     "Wansmer/treesj",
     keys = {
       {

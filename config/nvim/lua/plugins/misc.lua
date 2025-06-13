@@ -11,6 +11,21 @@ return {
   { "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
 
   {
+    "coder/claudecode.nvim",
+    config = true,
+    keys = {
+      { "<leader>ac", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
+      { "<leader>as", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send to Claude" },
+      {
+        "<leader>as",
+        "<cmd>ClaudeCodeTreeAdd<cr>",
+        desc = "Add file",
+        ft = { "NvimTree", "neo-tree" },
+      },
+    },
+  },
+
+  {
     "Wansmer/treesj",
     keys = {
       {

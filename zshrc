@@ -49,6 +49,9 @@ alias gitblank="git init && git commit --allow-empty -m 'Init'"
 alias ds="devbox shell"
 alias dr="devbox run"
 
+# "fast" update
+alias fsup="(bundle && rails db:prepare) & yarn & wait"
+
 # Better history
 # Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
 autoload -U up-line-or-beginning-search

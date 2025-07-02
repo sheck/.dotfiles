@@ -125,3 +125,5 @@ PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export -U PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+. "$HOME/.langflow/uv/env"

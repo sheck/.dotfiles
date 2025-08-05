@@ -14,9 +14,8 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 4. Clone secret `dotfiles-local` repo to `~/dotfiles-local`
 5. Install homebrew (prepend `NONINTERACTIVE=1` when installing on Ubuntu)
 6. `cd excluded_assets && brew bundle`
-7. `chsh -s $(which zsh)` or `sudo chsh $(whoami) -s $(which zsh)` (Ubuntu)
+7. `sudo chsh $(whoami) -s $(which zsh)` (Ubuntu)
 8. `rcup`
-9. `npm i -g git-mob`
 
 ### macOS
 

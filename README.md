@@ -10,7 +10,7 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
      name = Nick Sheck
      email = sheck@users.noreply.github.com
    ```
-3. `cd ~ && git clone --recurse-submodules git@github.com:sheck/.dotfiles.git`
+3. `cd ~ && git clone --recurse-submodules https://github.com/sheck/.dotfiles.git`
 4. Clone secret `dotfiles-local` repo to `~/dotfiles-local`
 5. Install homebrew (prepend `NONINTERACTIVE=1` when installing on Ubuntu)
 6. `cd excluded_assets && brew bundle`

@@ -1,2 +1,3 @@
 DOTFILES_DIRS="$HOME/.dotfiles $HOME/dotfiles-local"
 EXCLUDES="excluded_assets README.md TODO.md"
+UNDOTTED="Library"

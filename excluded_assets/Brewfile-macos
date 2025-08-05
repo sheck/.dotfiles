@@ -1,5 +1,3 @@
-tap "homebrew/cask"
-
 brew "mas"
 
 cask "1password"

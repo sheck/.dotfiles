@@ -10,6 +10,7 @@ cask "slack"
 cask "raycast"
 cask "obsidian"
 cask "brainfm"
+cask "hyperkey"
 
 mas "Things", id: 904280696
 mas "Tailscale", id: 1475387142

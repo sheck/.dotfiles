@@ -3,18 +3,16 @@ tap "homebrew/cask"
 brew "mas"
 
 cask "1password"
-cask "alfred"
-cask "arc"
 cask "dash"
 cask "hey"
-cask "iterm2"
-cask "karabiner-elements"
+cask "ghostty"
 cask "keybase"
 cask "krisp"
-cask "rectangle"
 cask "slack"
-cask "spotify"
-cask "visual-studio-code"
+cask "raycast"
+cask "obsidian"
+cask "brainfm"
 
 mas "Things", id: 904280696
 mas "Tailscale", id: 1475387142
+mas "Neptunes", id: 1006739057

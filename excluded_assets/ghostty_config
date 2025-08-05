@@ -1,0 +1,11 @@
+background-opacity = 0.9
+background-blur = true
+
+font-size = 15
+
+theme = srcery
+
+# theme = light:GruvboxLightHard,dark:GruvboxDarkHard
+
+# theme = light:GruvboxLight,dark:GruvboxDark
+keybind = shift+enter=text:\n

@@ -11,6 +11,10 @@ cask "raycast"
 cask "obsidian"
 cask "brainfm"
 cask "hyperkey"
+cask "rectangle-pro"
+
+cask "airfoil"
+mas "djay", id: 450527929
 
 mas "Things", id: 904280696
 mas "Tailscale", id: 1475387142

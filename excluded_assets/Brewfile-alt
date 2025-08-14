@@ -1,3 +1,4 @@
 cask "zoom"
+cask "tuple"
 
 mas "Nordlayer", id: 1488888843

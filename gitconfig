@@ -28,10 +28,8 @@
   navigate = true # use n and N to move between diff sections
 [merge]
   conflictstyle = diff3
-	tool = Kaleidoscope
 [diff]
   colorMoved = zebra
-	tool = Kaleidoscope
 [pull]
   rebase = true
 [filter "lfs"]
@@ -39,13 +37,3 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
-	trustExitCode = true
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[mergetool]
-	prompt = false

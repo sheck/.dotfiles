@@ -16,6 +16,7 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 6. Install homebrew (prepend `NONINTERACTIVE=1` when installing on Ubuntu)
 7. `sudo chsh $(whoami) -s $(which zsh)` (Ubuntu)
 8. `rcup` (may need to run 2x on macos to get ghostty preferences set correctly)
+9. `git remote set-url origin git@github.com:sheck/.dotfiles.git`
 
 ### macOS
 

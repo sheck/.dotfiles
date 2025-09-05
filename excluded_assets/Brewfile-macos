@@ -12,6 +12,7 @@ cask "obsidian"
 cask "brainfm"
 cask "hyperkey"
 cask "rectangle-pro"
+cask "ubersicht"
 
 cask "airfoil"
 mas "djay", id: 450527929

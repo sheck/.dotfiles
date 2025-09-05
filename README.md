@@ -18,8 +18,7 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
 8. `rcup` (may need to run 2x on macos to get ghostty preferences set correctly)
 9. `git remote set-url origin git@github.com:sheck/.dotfiles.git`
 
-### macOS
+### alt
 
 1. `cd excluded_assets`
-2. `brew bundle --file Brewfile-macos`
 3. `brew bundle --file Brewfile-alt`

@@ -40,3 +40,10 @@ if OS.mac?
   mas "Neptunes", id: 1006739057
   mas "iA Writer", id: 775737590
 end
+
+if Dir.exist?(File.expand_path("~/pco-box"))
+  cask "zoom"
+  cask "tuple"
+
+  mas "Nordlayer", id: 1488888843
+end

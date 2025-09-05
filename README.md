@@ -11,14 +11,9 @@ My dotfiles. Roughly based on [thoughtbot/dotfiles](https://github.com/thoughtbo
      email = sheck@users.noreply.github.com
    ```
 3. `cd ~ && git clone --recurse-submodules https://github.com/sheck/.dotfiles.git`
-4. `cd excluded_assets && brew bundle`
+4. `brew bundle`
 5. Clone secret `dotfiles-local` repo to `~/dotfiles-local`
 6. Install homebrew (prepend `NONINTERACTIVE=1` when installing on Ubuntu)
 7. `sudo chsh $(whoami) -s $(which zsh)` (Ubuntu)
 8. `rcup` (may need to run 2x on macos to get ghostty preferences set correctly)
 9. `git remote set-url origin git@github.com:sheck/.dotfiles.git`
-
-### alt
-
-1. `cd excluded_assets`
-3. `brew bundle --file Brewfile-alt`

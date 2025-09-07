@@ -5,7 +5,7 @@ export const command = 'shortcuts run "Office CO2 Level" | xargs'
 
 export const className = `
   font-family: system-ui;
-  margin: 1%;
+  margin: 1% 2%;
   opacity: .5;
   @media (prefers-color-scheme: dark) {
     color: #fff;

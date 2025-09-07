@@ -22,7 +22,6 @@ if OS.mac?
   cask "hey"
   cask "ghostty"
   cask "keybase"
-  cask "krisp"
   cask "slack"
   cask "raycast"
   cask "obsidian"
@@ -43,6 +42,7 @@ end
 
 if Dir.exist?(File.expand_path("~/pco-box"))
   cask "zoom"
+  cask "krisp"
   cask "tuple"
 
   mas "Nordlayer", id: 1488888843

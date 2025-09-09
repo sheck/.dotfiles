@@ -30,6 +30,7 @@ if OS.mac?
   cask "rectangle-pro"
   cask "ubersicht"
   cask "claude-code"
+  cask "rapidapi"
 
   cask "airfoil"
   mas "djay", id: 450527929

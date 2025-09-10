@@ -1,4 +1,4 @@
-const seconds = 10
+const seconds = 60
 export const refreshFrequency = seconds * 1000
 
 export const command = 'shortcuts run "Office Humidity Level" | xargs'

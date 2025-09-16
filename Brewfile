@@ -39,6 +39,7 @@ if OS.mac?
   mas "Tailscale", id: 1475387142
   mas "Neptunes", id: 1006739057
   mas "iA Writer", id: 775737590
+  mas "Tomato 2", id: 1494210770
 end
 
 if Dir.exist?(File.expand_path("~/pco-box"))

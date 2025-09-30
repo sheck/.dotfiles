@@ -31,6 +31,7 @@ if OS.mac?
   cask "ubersicht"
   cask "claude-code"
   cask "rapidapi"
+  cask "unifi-identity-endpoint"
 
   cask "airfoil"
   mas "djay", id: 450527929

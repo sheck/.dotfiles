@@ -9,3 +9,6 @@
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Direnv
+eval "$(direnv hook zsh)"

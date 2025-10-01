@@ -1,39 +1,3 @@
-# No arguments: `git status`
-# With arguments: acts like `git`
-g() {
-  if [[ $# -gt 0 ]]; then
-    git "$@"
-  else
-    git status
-  fi
-}
-
-# makes color constants available
-autoload -U colors
-colors
-
-# enable colored output from ls, etc. on FreeBSD-based systems
-export CLICOLOR=1
-
-# Display branch name and dirty status in prompt
-dirty_branch_marker() {
-  [[ $(git status --porcelain 2> /dev/null) ]] && echo " %{$fg_bold[red]%}✗%{$reset_color%}"
-}
-git_initials() {
-  # local initials=$(git mob-print --initials)
-  # if [[ -n "${initials}" ]]; then
-  #   echo " [${initials}]"
-  # fi
-}
-git_prompt_info() {
-  current_branch=$(git current-branch 2> /dev/null)
-  if [[ -n $current_branch ]]; then
-    echo " %{$fg_bold[green]%}$current_branch%{$reset_color%}$(dirty_branch_marker)$(git_initials)"
-  fi
-}
-setopt promptsubst
-PS1='${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%c%{$reset_color%}$(git_prompt_info) %# '
-
 export VISUAL=nvim
 export EDITOR=$VISUAL
 

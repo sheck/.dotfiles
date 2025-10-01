@@ -1,21 +1,3 @@
-export VISUAL=nvim
-export EDITOR=$VISUAL
-
-alias mkdir="mkdir -p"
-alias e="$EDITOR"
-alias v="$VISUAL"
-
-alias b="bundle"
-alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
-
-alias gitblank="git init && git commit --allow-empty -m 'Init'"
-
-alias ds="devbox shell"
-alias dr="devbox run"
-
-# "fast" update
-alias fsup="(bundle && rails db:prepare) & yarn & wait"
-
 # Better history
 # Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
 autoload -U up-line-or-beginning-search
@@ -94,3 +76,6 @@ export -U PATH
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(direnv hook zsh)"
+
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases

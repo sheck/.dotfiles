@@ -14,21 +14,6 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # linux
 [ -f /home/linuxbrew/.linuxbrew/etc/profile.d/autojump.sh ] && . /home/linuxbrew/.linuxbrew/etc/profile.d/autojump.sh
 
-
-# Complettion config
-# load our own completion functions
-fpath=(~/.zsh/completion /usr/local/share/zsh/site-functions $fpath)
-# completion; use cache if updated within 24h
-autoload -Uz compinit
-if [[ -n $HOME/.zcompdump(#qN.mh+24) ]]; then
-  compinit -d $HOME/.zcompdump;
-else
-  compinit -C;
-fi;
-# disable zsh bundled function mtools command mcd
-# which causes a conflict.
-compdef -d mcd
-
 # extra files in ~/.zsh/configs/pre , ~/.zsh/configs , and ~/.zsh/configs/post
 # these are loaded first, second, and third, respectively.
 _load_settings() {

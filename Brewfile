@@ -19,7 +19,7 @@ if OS.mac?
 
   cask "1password"
   cask "dash"
-  cask "hey"
+  cask "hey-desktop"
   cask "ghostty"
   cask "keybase"
   cask "slack"

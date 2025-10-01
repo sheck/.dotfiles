@@ -1,3 +1,8 @@
+# load custom executable functions
+for function in ~/.zsh/functions/*; do
+  source $function
+done
+
 # extra files in ~/.zsh/configs/pre , ~/.zsh/configs , and ~/.zsh/configs/post
 # these are loaded first, second, and third, respectively.
 _load_settings() {
@@ -29,22 +34,9 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
-# Ensure dotfiles bin directory is loaded first
-PATH="$HOME/.bin:/usr/local/sbin:$PATH"
-
-# `git mark-safe` (or `mkdir .git/safe`) in the root of repositories you trust
-PATH=".git/safe/../../bin:$PATH"
-
-# Use locally installed versions of npm executables
-PATH=".git/safe/../../node_modules/.bin:$PATH"
-
-PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-
-export -U PATH
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(direnv hook zsh)"
-
-# aliases
-[[ -f ~/.aliases ]] && source ~/.aliases

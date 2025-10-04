@@ -6,6 +6,8 @@ brew "bat"
 brew "watchman"
 brew "git-delta"
 brew "the_silver_searcher"
+# used by lazyvim
+brew "ripgrep"
 brew "autojump"
 brew "eza"
 brew "jq"

@@ -27,11 +27,6 @@ DeRez -only icns "$TEMP_ICON" > /tmp/icon.rsrc
 sudo Rez -append /tmp/icon.rsrc -o $''"$APP_PATH"$'/Icon\r'
 sudo SetFile -a C "$APP_PATH"
 
-# Refresh icon cache
-touch "$APP_PATH"
-killall Finder
-killall Dock
-
 # Cleanup
 rm "$TEMP_ICON"
 rm /tmp/icon.rsrc

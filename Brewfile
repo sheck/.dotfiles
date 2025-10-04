@@ -6,8 +6,6 @@ brew "bat"
 brew "watchman"
 brew "git-delta"
 brew "the_silver_searcher"
-# used by lazyvim
-brew "ripgrep"
 brew "autojump"
 brew "eza"
 brew "jq"
@@ -54,4 +52,9 @@ if Dir.exist?(File.expand_path("~/pco-box"))
   cask "cleanshot"
 
   mas "Nordlayer", id: 1488888843
+else
+  brew "ripgrep"
+  brew "colima"
+  brew "docker"
+  brew "docker-buildx"
 end

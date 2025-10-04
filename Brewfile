@@ -20,6 +20,7 @@ if OS.mac?
   brew "mas"
 
   cask "1password"
+  cask "1password-cli"
   cask "dash"
   cask "hey-desktop"
   cask "ghostty"

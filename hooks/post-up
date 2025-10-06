@@ -1,7 +1,5 @@
 brew bundle --file ../Brewfile
 
-../excluded_assets/ghostty_icon.sh
-
 nvim --headless '+Lazy! sync' +qa
 
 reset -Q

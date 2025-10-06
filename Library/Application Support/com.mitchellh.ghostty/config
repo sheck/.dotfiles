@@ -8,4 +8,7 @@ theme = srcery
 # theme = light:GruvboxLightHard,dark:GruvboxDarkHard
 
 # theme = light:GruvboxLight,dark:GruvboxDark
+
+macos-icon = blueprint
+
 keybind = shift+enter=text:\n

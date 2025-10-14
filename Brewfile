@@ -3,7 +3,6 @@ brew "git-lfs"
 brew "neovim"
 
 brew "bat"
-brew "watchman"
 brew "git-delta"
 brew "the_silver_searcher"
 brew "autojump"

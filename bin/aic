@@ -1,210 +1,102 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
-require 'optparse'
 require 'tempfile'
+require 'shellwords'
 
-# Check required dependencies
-def check_dependencies
-  dependencies = {
-    'gum' => 'https://github.com/charmbracelet/gum',
-    'bat' => 'https://github.com/sharkdp/bat',
-    'llm' => 'https://llm.datasette.io/'
-  }
+# Configuration
+OLLAMA_MODEL = 'qwen2.5-coder:32b'
+EDITOR = ENV['EDITOR'] || 'nvim'
 
-  dependencies.each do |cmd, url|
-    unless system("command -v #{cmd} > /dev/null 2>&1")
-      puts "Error: #{cmd} is not installed. Install it from #{url}"
-      exit 1
-    end
-  end
-end
-
-# Parse command line arguments
-def parse_arguments
-  options = {
-    context: false,
-    claude: false,
-    summary_only: false
-  }
-
-  OptionParser.new do |opts|
-    opts.on('-c', '--context', 'Prompt for context') { options[:context] = true }
-    opts.on('--claude', 'Get context from Claude') { options[:claude] = true }
-    opts.on('-s', '--summary-only', 'Summary only') { options[:summary_only] = true }
-  end.parse!
-
-  options
-end
-
-# Clean blank lines and remove markdown fences
-def clean_blank_lines(input_file)
-  output = Tempfile.new('cleaned')
-
-  content = File.read(input_file)
-  # Remove markdown code fences
-  content = content.gsub(/^```$/, '')
-
-  # Remove leading blank lines and consecutive blank lines
-  lines = content.lines
-  result = []
-  blank_found = false
-  started = false
-
-  lines.each do |line|
-    if line.strip.empty?
-      if started && !blank_found
-        result << line
-        blank_found = true
-      end
-    else
-      result << line
-      blank_found = false
-      started = true
-    end
-  end
-
-  output.write(result.join)
-  output.close
-  output.path
-end
-
-# Main function
-def main
-  check_dependencies
-  options = parse_arguments
-
-  # Get the git diff
-  diff = `git diff --cached`
-
+def get_staged_diff
+  diff = `git diff --staged`
   if diff.strip.empty?
-    puts "No staged changes to commit"
+    puts "No staged changes found."
     exit 1
   end
+  diff
+end
 
-  # Collect context if -c flag is provided
-  context = ""
-  if options[:context]
-    context = `gum write --placeholder "What motivated this change? Is there context a future reader will need to know? What problem did you solve?"`.chomp
-  end
+def format_commit_message(message)
+  lines = message.split("\n", 2)
+  return message if lines.length == 1
 
-  # Collect context from Claude if --claude flag is provided
-  if options[:claude]
-    claude_context = `claude --continue --print "What context from this session would be useful for writing a commit message? Don't suggest a message or list affected files. Focus on the WHY of this work."`.chomp
-    if !context.empty?
-      context = "#{context}\n#{claude_context}"
-    else
-      context = claude_context
-    end
-  end
+  subject = lines[0]
+  body = lines[1].strip
+  return subject if body.empty?
 
-  # Start with default temperature
-  temp_options = []
-  reroll_count = 0
-  base_prompt = <<~PROMPT
-    You are a git commit message generator. Analyze the provided git diff and generate a clear, concise commit message following these rules:
+  # Wrap body at 72 characters using fold
+  wrapped = `echo #{body.shellescape} | fold -w 72 -s`.strip
 
-    1. Use conventional commit format: <type>: <description>
-    2. Types: feat, fix, refactor, docs, style, test, chore, perf
-    3. Description should be imperative mood (e.g., "add" not "added")
-    4. Keep the first line (title) at 50 characters or less
-    5. If needed, add a blank line then a detailed body explaining WHY (not what - the diff shows what)
-    6. Wrap body lines at 72 characters
-    7. Focus on the most important change if multiple things changed
+  "#{subject}\n\n#{wrapped}"
+end
+
+def generate_commit_message(diff, condense: false)
+  prompt = <<~PROMPT
+    Generate a git commit message for the following staged changes.
+
+    Rules:
+    - First line must be less than 50 characters total
+    - If needed, add a blank line then a concise description
+    - Focus on what changed, not why
+    - Be direct and clear
+
+    #{condense ? "IMPORTANT: Make this MORE CONCISE than usual.\n\n" : ""}
+    Staged changes:
+    #{diff}
+
+    Provide only the commit message, no explanations or additional text.
   PROMPT
 
-  if !context.empty?
-    prompt = "#{base_prompt}\nAdditional context from the developer:\n#{context}"
-  else
-    prompt = base_prompt
+  message = `echo #{prompt.shellescape} | ollama run #{OLLAMA_MODEL}`.strip
+  format_commit_message(message)
+end
+
+def show_message(message)
+  IO.popen("bat -P -H 1 --style=changes,grid,numbers,snip", "w") do |bat|
+    bat.puts message
   end
+  puts # Add blank line for spacing
+end
 
-  # Loop to allow rerolls
-  loop do
-    # Generate commit message and save to temp file
-    temp_file = Tempfile.new('commit')
-
-    IO.popen("llm -s \"#{prompt}\" #{temp_options.join(' ')}", 'w+') do |io|
-      io.write(diff)
-      io.close_write
-      temp_file.write(io.read)
-    end
-
-    temp_file.close
-
-    # Read first line to check length
-    summary = File.readlines(temp_file.path)[0].chomp
-    summary_length = summary.length
-
-    if summary_length > 72
-      puts "Summary too long (#{summary_length} chars), regenerating..."
-      temp_file.unlink
-      next
-    end
-
-    # Clean up blank lines
-    cleaned_file = clean_blank_lines(temp_file.path)
-    temp_file.unlink
-    temp_file_path = cleaned_file
-    display_file = temp_file_path
-
-    # Show the generated message
-    puts "Generated commit message:"
-    system("bat -P -H 1 --style=changes,grid,numbers,snip #{display_file}")
-
-    # Let user choose what to do
-    action = `gum choose "Commit" "Commit and Push" "Edit" "Reroll" "Condense" "Cancel"`.chomp
-
-    case action
-    when "Commit"
-      system("git commit -F #{display_file}")
-      File.unlink(temp_file_path)
-      exit 0
-    when "Commit and Push"
-      system("git commit -F #{display_file}")
-      File.unlink(temp_file_path)
-      system("git push")
-      exit 0
-    when "Edit"
-      editor = ENV['EDITOR'] || 'vim'
-      system("#{editor} #{display_file}")
-      system("git commit -F #{display_file}")
-      File.unlink(temp_file_path)
-      exit 0
-    when "Reroll"
-      reroll_count += 1
-      temp = 0.5 + reroll_count * 0.3
-      temp_options = ["-o", "temperature", temp.to_s]
-      puts "Generating new message (temperature: #{temp})..."
-      File.unlink(temp_file_path)
-      next
-    when "Condense"
-      puts "Condensing message..."
-      current_message = File.read(temp_file_path)
-      condense_prompt = "Take this commit message and make it more concise while retaining the what and the why:\n#{current_message}"
-
-      condensed_file = Tempfile.new('condensed')
-      IO.popen("llm", 'w+') do |io|
-        io.write(condense_prompt)
-        io.close_write
-        condensed_file.write(io.read)
-      end
-      condensed_file.close
-
-      File.unlink(temp_file_path)
-      temp_file_path = condensed_file.path
-
-      # Clean up blank lines after condensing
-      cleaned_file = clean_blank_lines(temp_file_path)
-      File.unlink(temp_file_path)
-      temp_file_path = cleaned_file
-      next
-    when "Cancel"
-      puts "Commit cancelled"
-      File.unlink(temp_file_path)
-      exit 1
-    end
+def edit_message(message)
+  Tempfile.create(['commit_msg', '.txt']) do |file|
+    file.write(message)
+    file.flush
+    system("#{EDITOR} #{file.path}")
+    File.read(file.path)
   end
 end
 
-# Run the main function
-main
+def commit(message)
+  Tempfile.create(['commit_msg', '.txt']) do |file|
+    file.write(message)
+    file.flush
+    system("git commit -F #{file.path}")
+  end
+end
+
+# Main flow
+diff = get_staged_diff
+message = generate_commit_message(diff)
+
+loop do
+  show_message(message)
+
+  choice = `gum choose --selected="Commit" "Commit" "Edit" "Condense" "Cancel"`.strip
+
+  case choice
+  when "Commit"
+    commit(message)
+    puts "✓ Committed!"
+    break
+  when "Edit"
+    message = edit_message(message)
+  when "Condense"
+    puts "Generating more concise message..."
+    message = generate_commit_message(diff, condense: true)
+  when "Cancel", ""
+    puts "Cancelled."
+    exit 0
+  end
+end

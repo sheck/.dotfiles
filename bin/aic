@@ -68,25 +68,6 @@ def clean_blank_lines(input_file)
   output.path
 end
 
-# Add LLM disclaimer after first line
-def add_disclaimer(input_file, summary_only = false)
-  output = Tempfile.new('disclaimer')
-
-  lines = File.readlines(input_file)
-  summary = lines[0]
-
-  output.puts summary.chomp
-  output.puts ""
-  output.puts "This commit message was generated with the help of LLMs."
-
-  unless summary_only
-    lines[1..-1].each { |line| output.write(line) }
-  end
-
-  output.close
-  output.path
-end
-
 # Main function
 def main
   check_dependencies
@@ -163,9 +144,7 @@ def main
     cleaned_file = clean_blank_lines(temp_file.path)
     temp_file.unlink
     temp_file_path = cleaned_file
-
-    # Add disclaimer for display and commit
-    display_file = add_disclaimer(temp_file_path, options[:summary_only])
+    display_file = temp_file_path
 
     # Show the generated message
     puts "Generated commit message:"
@@ -178,12 +157,10 @@ def main
     when "Commit"
       system("git commit -F #{display_file}")
       File.unlink(temp_file_path)
-      File.unlink(display_file)
       exit 0
     when "Commit and Push"
       system("git commit -F #{display_file}")
       File.unlink(temp_file_path)
-      File.unlink(display_file)
       system("git push")
       exit 0
     when "Edit"
@@ -191,7 +168,6 @@ def main
       system("#{editor} #{display_file}")
       system("git commit -F #{display_file}")
       File.unlink(temp_file_path)
-      File.unlink(display_file)
       exit 0
     when "Reroll"
       reroll_count += 1
@@ -199,7 +175,6 @@ def main
       temp_options = ["-o", "temperature", temp.to_s]
       puts "Generating new message (temperature: #{temp})..."
       File.unlink(temp_file_path)
-      File.unlink(display_file)
       next
     when "Condense"
       puts "Condensing message..."
@@ -221,13 +196,10 @@ def main
       cleaned_file = clean_blank_lines(temp_file_path)
       File.unlink(temp_file_path)
       temp_file_path = cleaned_file
-
-      File.unlink(display_file)
       next
     when "Cancel"
       puts "Commit cancelled"
       File.unlink(temp_file_path)
-      File.unlink(display_file)
       exit 1
     end
   end

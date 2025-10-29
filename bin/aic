@@ -120,13 +120,14 @@ def main
   temp_options = []
   reroll_count = 0
   base_prompt = <<~PROMPT
-    Write a git commit message for these changes. Format it as:
-    - First line: a summary of 72 characters or less
-    - Second line: blank
-    - Remaining lines: detailed description (keep this BRIEF - 2-4 sentences max)
-    The tone should be confident, conversational, and slightly irreverent, mixing technical precision with plainspoken candor. Write as an experienced expert speaking peer-to-peer, empathetic to pain points but authoritative in solutions. Keep it credible, no-nonsense, and built for engineers tired of vague marketing.
-    Be concise. Every word should earn its place.
-    Return only the commit message.
+    You are a git commit message generator. Analyze the provided git diff and generate a clear, concise commit message following these rules:
+
+    1. Use conventional commit format: <type>: <description>
+    2. Types: feat, fix, refactor, docs, style, test, chore, perf
+    3. Description should be imperative mood (e.g., "add" not "added")
+    4. Keep the first line under 72 characters
+    5. If needed, add a blank line then a detailed body explaining WHY (not what - the diff shows what)
+    6. Focus on the most important change if multiple things changed
   PROMPT
 
   if !context.empty?

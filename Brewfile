@@ -47,7 +47,6 @@ end
 
 if Dir.exist?(File.expand_path("~/pco-box"))
   cask "zoom"
-  cask "krisp"
   cask "tuple"
   cask "cleanshot"
 

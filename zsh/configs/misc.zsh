@@ -12,3 +12,6 @@
 
 # Direnv
 eval "$(direnv hook zsh)"
+
+# Mise
+eval "$(mise activate zsh)"

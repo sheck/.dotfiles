@@ -12,6 +12,7 @@ brew "lazygit"
 brew "lazydocker"
 brew "tldr"
 brew "direnv"
+brew "mise"
 
 if OS.mac?
   brew "mas"

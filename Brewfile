@@ -35,9 +35,6 @@ if OS.mac?
   cask "unifi-identity-endpoint"
   cask "signal"
 
-  cask "airfoil"
-  mas "djay", id: 450527929
-
   mas "Things", id: 904280696
   mas "Tailscale", id: 1475387142
   mas "Neptunes", id: 1006739057

@@ -7,7 +7,6 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
-    dependencies = { "Shopify/ruby-lsp" },
     opts = {
       servers = {
         -- _don't_ install with mason as that causes gem install errors when

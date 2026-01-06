@@ -49,6 +49,7 @@ return {
       servers = {
         emmet_language_server = {},
         svelte = {},
+        herb_ls = {},
       },
     },
   },

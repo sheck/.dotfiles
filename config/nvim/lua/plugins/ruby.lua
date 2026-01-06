@@ -13,6 +13,8 @@ return {
         -- launching nvim after the initial install
         ruby_lsp = {
           mason = false,
+          -- explicitly exclude eruby to let herb_ls handle it
+          filetypes = { "ruby" },
         },
         rubocop = {
           enabled = vim.fn.filereadable('.standard.yml') == 0,

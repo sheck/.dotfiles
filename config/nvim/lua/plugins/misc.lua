@@ -48,7 +48,7 @@ return {
     opts = {
       servers = {
         emmet_language_server = {},
-        svelte = {},
+        -- svelte = {},
         herb_ls = {},
       },
     },

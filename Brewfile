@@ -35,9 +35,9 @@ if OS.mac?
   cask "rapidapi"
   cask "unifi-identity-endpoint"
   cask "signal"
+  cask "tailscale"
 
   mas "Things", id: 904280696
-  mas "Tailscale", id: 1475387142
   mas "Neptunes", id: 1006739057
   mas "iA Writer", id: 775737590
   mas "Tomato 2", id: 1494210770

@@ -1,3 +1,6 @@
+# claude code installs here
+PATH="$HOME/.local/bin:$PATH"
+
 # ensure dotfiles bin directory is loaded first
 PATH="$HOME/.bin:/usr/local/sbin:$PATH"
 

@@ -31,7 +31,6 @@ if OS.mac?
   cask "hyperkey"
   cask "rectangle-pro"
   cask "ubersicht"
-  cask "claude-code"
   cask "rapidapi"
   cask "unifi-identity-endpoint"
   cask "signal"

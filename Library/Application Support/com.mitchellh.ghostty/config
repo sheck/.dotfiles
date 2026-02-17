@@ -12,3 +12,5 @@ theme = srcery
 macos-icon = blueprint
 
 keybind = shift+enter=text:\n
+
+keybind = cmd+i=prompt_surface_title

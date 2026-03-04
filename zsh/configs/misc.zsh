@@ -9,3 +9,9 @@
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Direnv
+eval "$(direnv hook zsh)"
+
+# Mise
+eval "$(mise activate zsh)"

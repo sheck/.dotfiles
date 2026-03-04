@@ -1,5 +1,7 @@
-# Baseline PATH entries that must be available before direnv/devbox
-# modify the environment. direnv snapshots "before" PATH on hook,
-# so anything not in PATH at that point gets dropped.
-PATH="$HOME/.local/bin:$HOME/.bin:/usr/local/sbin:$PATH"
-export -U PATH
+if [ -d "/opt/homebrew" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -d "~/.linuxbrew" ]; then
+  eval "$(~/.linuxbrew/bin/brew shellenv)"
+elif [ -d "/home/linuxbrew" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi

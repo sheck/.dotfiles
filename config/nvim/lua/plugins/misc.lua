@@ -49,7 +49,13 @@ return {
       servers = {
         emmet_language_server = {},
         -- svelte = {},
-        herb_ls = {},
+        herb_ls = {
+          settings = {
+            languageServerHerb = {
+              formatter = { enabled = true },
+            },
+          },
+        },
       },
     },
   },

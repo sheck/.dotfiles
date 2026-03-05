@@ -31,4 +31,4 @@ alias dr="devbox run"
 alias fsup="(bundle && rails db:prepare) & yarn & wait"
 
 # aider
-alias aid="OLLAMA_API_BASE=http://127.0.0.1:11434 aider --model ollama_chat/qwen3-coder"
+alias aid="OLLAMA_API_BASE=http://127.0.0.1:11434 aider --model ollama_chat/qwen3.5"

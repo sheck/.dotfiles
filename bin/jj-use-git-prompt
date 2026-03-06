@@ -1,0 +1,2 @@
+#!/bin/sh
+mkdir -p .jj/use-git-prompt

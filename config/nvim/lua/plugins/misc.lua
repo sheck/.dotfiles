@@ -50,6 +50,8 @@ return {
         emmet_language_server = {},
         -- svelte = {},
         herb_ls = {
+          -- Don't run on regular html
+          filetypes = { "eruby" },
           settings = {
             languageServerHerb = {
               formatter = { enabled = true },

@@ -1,2 +1,5 @@
 [revset-aliases]
 "immutable_heads()" = "present(trunk()) | tags()"
+
+[ui]
+default-command = "log"

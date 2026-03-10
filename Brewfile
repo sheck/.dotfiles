@@ -16,7 +16,6 @@ brew "mise"
 
 if OS.mac?
   brew "mas"
-  brew "fileicon"
 
   cask "1password"
   cask "1password-cli"

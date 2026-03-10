@@ -13,6 +13,8 @@ brew "lazydocker"
 brew "tldr"
 brew "direnv"
 brew "mise"
+brew "starship"
+brew "dmmulroy/tap/jj-starship"
 
 if OS.mac?
   brew "mas"

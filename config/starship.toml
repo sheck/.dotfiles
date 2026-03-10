@@ -7,8 +7,7 @@ $username\
 [](bg:color_yellow fg:color_orange)\
 $directory\
 [](fg:color_yellow bg:color_aqua)\
-$git_branch\
-$git_status\
+${custom.jj}\
 [](fg:color_aqua bg:color_blue)\
 $c\
 $cpp\
@@ -91,13 +90,10 @@ truncation_symbol = "…/"
 "Developer" = "󰲋 "
 
 [git_branch]
-symbol = ""
-style = "bg:color_aqua"
-format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
+disabled = true
 
 [git_status]
-style = "bg:color_aqua"
-format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
+disabled = true
 
 [nodejs]
 symbol = ""
@@ -179,3 +175,10 @@ vimcmd_symbol = '[](bold fg:color_green)'
 vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
 vimcmd_replace_symbol = '[](bold fg:color_purple)'
 vimcmd_visual_symbol = '[](bold fg:color_yellow)'
+
+[custom.jj]
+symbol = ""
+style = "bg:color_aqua"
+format = '[[ $symbol $output ](fg:color_fg0 bg:color_aqua)]($style)'
+when = "jj-starship detect"
+shell = ["jj-starship", "--no-color", "--no-symbol", "--no-jj-prefix", "--no-git-prefix"]

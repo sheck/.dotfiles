@@ -1,5 +1,6 @@
 brew "rcm"
 brew "git-lfs"
+brew "jj"
 brew "neovim"
 
 brew "bat"

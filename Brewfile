@@ -4,7 +4,7 @@ brew "jj"
 brew "neovim"
 
 brew "bat"
-brew "git-delta"
+brew "difftastic"
 brew "the_silver_searcher"
 brew "autojump"
 brew "eza"

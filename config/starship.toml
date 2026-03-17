@@ -20,7 +20,6 @@ $git_status\
 $hg_branch\
 $hg_state\
 $pijul_channel\
-$docker_context\
 $package\
 $c\
 $cmake\
@@ -46,7 +45,6 @@ $kotlin\
 $gradle\
 $lua\
 $nim\
-$nodejs\
 $ocaml\
 $opa\
 $perl\
@@ -58,7 +56,6 @@ $quarto\
 $raku\
 $rlang\
 $red\
-$ruby\
 $rust\
 $scala\
 $solidity\
@@ -69,7 +66,6 @@ $vlang\
 $vagrant\
 $zig\
 $buf\
-$nix_shell\
 $conda\
 $meson\
 $spack\

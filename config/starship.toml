@@ -10,6 +10,10 @@ $line_break\
 $python\
 $character"""
 
+right_format = """
+$git_metrics\
+"""
+
 [directory]
 style = "blue"
 
@@ -26,3 +30,10 @@ style = "yellow"
 when = "jj-starship detect"
 shell = ["jj-starship"]
 format = "$output "
+
+[git_metrics]
+format = '([▴$added]($added_style))([▿$deleted]($deleted_style))'
+added_style = 'italic green'
+deleted_style = 'italic red'
+ignore_submodules = true
+disabled = false

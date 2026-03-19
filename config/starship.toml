@@ -5,14 +5,11 @@ $username\
 $hostname\
 $directory\
 $custom\
+$git_metrics\
 $cmd_duration\
 $line_break\
 $python\
 $character"""
-
-right_format = """
-$git_metrics\
-"""
 
 [directory]
 style = "blue"
@@ -32,8 +29,8 @@ shell = ["jj-starship"]
 format = "$output "
 
 [git_metrics]
-format = '([▴$added]($added_style))([▿$deleted]($deleted_style))'
-added_style = 'italic green'
-deleted_style = 'italic red'
+format = '([▴$added]($added_style))([▿$deleted]($deleted_style) )'
+added_style = 'green'
+deleted_style = 'red'
 ignore_submodules = true
 disabled = false

@@ -38,6 +38,7 @@ if OS.mac?
   cask "unifi-identity-endpoint"
   cask "signal"
   cask "tailscale-app"
+  cask "mullvad-vpn"
 
   mas "Things", id: 904280696
   mas "Neptunes", id: 1006739057

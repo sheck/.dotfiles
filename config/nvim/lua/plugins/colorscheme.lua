@@ -2,7 +2,8 @@
 vim.g.srcery_bg = { "NONE", "NONE" }
 
 return {
-  { "srcery-colors/srcery-vim" },
+  -- v3.0.0 changes variable names and bg transparency doesn't work the same
+  { "srcery-colors/srcery-vim", version = "^2.1" },
 
   -- Configure LazyVim to load srcery
   {

@@ -17,6 +17,7 @@ brew "direnv"
 brew "mise"
 brew "starship"
 brew "dmmulroy/tap/jj-starship"
+brew "pi-coding-agent"
 
 if OS.mac?
   brew "mas"

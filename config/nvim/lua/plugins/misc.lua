@@ -7,6 +7,14 @@ vim.g.autoformat = false
 
 return {
   {
+    "swaits/lazyjj.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+    opts = {
+      mapping = "<leader>jj"
+    },
+  },
+
+  {
     "Wansmer/treesj",
     keys = {
       {

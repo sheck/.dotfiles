@@ -51,6 +51,7 @@ if Dir.exist?(File.expand_path("~/pco-box"))
   cask "zoom"
   cask "tuple"
   cask "cleanshot"
+  cask "linear"
 
   mas "Nordlayer", id: 1488888843
 else

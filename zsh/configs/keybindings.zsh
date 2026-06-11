@@ -11,6 +11,8 @@ bindkey "^E" end-of-line
 bindkey "^K" kill-line
 bindkey "^R" history-incremental-search-backward
 bindkey "^P" history-search-backward
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey "^Q" push-line-or-edit

@@ -10,4 +10,8 @@ PATH=".git/safe/../../bin:$PATH"
 # Use locally installed versions of npm executables
 PATH=".git/safe/../../node_modules/.bin:$PATH"
 
+# Added by LM Studio CLI (lms)
+PATH="$PATH:$HOME/.lmstudio/bin"
+# End of LM Studio CLI section
+
 export -U PATH

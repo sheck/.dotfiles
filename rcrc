@@ -1,3 +1,7 @@
 DOTFILES_DIRS="$HOME/.dotfiles $HOME/dotfiles-local $HOME/ai-dotfiles"
 EXCLUDES="excluded_assets README.md TODO.md Brewfile"
 UNDOTTED="Library"
+
+if [ -s "$HOME/Code/pco/bin/pco" ] || [ -d "$HOME/pco-box" ]; then
+  TAGS="pco"
+fi

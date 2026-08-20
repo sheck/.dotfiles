@@ -35,3 +35,4 @@ alias aid="OLLAMA_API_BASE=http://127.0.0.1:11434 aider --model ollama_chat/glm-
 
 # Claude Code
 alias clopus="claude --model opus"
+alias clable="claude --model fable"

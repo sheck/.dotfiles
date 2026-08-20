@@ -1,8 +1,0 @@
-[revset-aliases]
-"immutable_heads()" = "present(trunk()) | tags()"
-
-[revsets]
-log = "(@ | ancestors(immutable_heads().., 2) | trunk()) ~ bookmarks(exact:\"staging\") ~ remote_bookmarks(exact:\"staging\", exact:\"origin\")"
-
-[ui]
-default-command = "log"

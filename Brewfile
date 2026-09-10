@@ -31,13 +31,10 @@ if OS.mac?
   cask "slack"
   cask "raycast"
   cask "obsidian"
-  cask "brainfm"
   cask "hyperkey"
   cask "rectangle-pro"
-  cask "ubersicht"
   cask "rapidapi"
   cask "unifi-identity-endpoint"
-  cask "signal"
   cask "tailscale-app"
   cask "mullvad-vpn"
 
@@ -52,7 +49,6 @@ if Dir.exist?(File.expand_path("~/pco-box"))
   cask "zoom"
   cask "tuple"
   cask "cleanshot"
-  cask "linear"
 
   mas "Nordlayer", id: 1488888843
 else

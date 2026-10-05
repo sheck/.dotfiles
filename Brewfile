@@ -38,7 +38,7 @@ if OS.mac?
   cask "unifi-identity-endpoint"
   cask "tailscale-app"
   cask "mullvad-vpn"
-  cask "font-jetbrains-mono"
+  cask "font-jetbrains-mono-nerd-font"
 
   mas "Things", id: 904280696
   mas "Neptunes", id: 1006739057

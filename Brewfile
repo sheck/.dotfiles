@@ -25,7 +25,6 @@ if OS.mac?
 
   cask "1password"
   cask "1password-cli"
-  cask "dash"
   cask "hey-desktop"
   cask "ghostty"
   cask "keybase"
@@ -43,7 +42,6 @@ if OS.mac?
   mas "Things", id: 904280696
   mas "Neptunes", id: 1006739057
   mas "iA Writer", id: 775737590
-  mas "Tomato 2", id: 1494210770
   mas "Onigiri", id: 1639917298
 end
 

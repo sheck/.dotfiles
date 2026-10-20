@@ -38,6 +38,7 @@ if OS.mac?
   cask "tailscale-app"
   cask "mullvad-vpn"
   cask "font-jetbrains-mono-nerd-font"
+  cask "thaw"
 
   mas "Things", id: 904280696
   mas "Neptunes", id: 1006739057

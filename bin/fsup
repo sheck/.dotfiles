@@ -1,0 +1,5 @@
+#!/bin/sh
+# "fast" update
+(bundle && rails db:prepare) &
+yarn &
+wait

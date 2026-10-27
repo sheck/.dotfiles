@@ -1,2 +1,6 @@
 [ui]
 default-command = "log"
+
+[revset-aliases]
+# Merging a branch into staging shouldn't freeze it.
+"immutable_heads()" = "builtin_immutable_heads() ~ remote_bookmarks(exact:'staging')"

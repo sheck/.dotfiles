@@ -5,11 +5,14 @@ return {
   -- v3.0.0 changes variable names and bg transparency doesn't work the same
   { "srcery-colors/srcery-vim", version = "^2.1" },
 
-  -- Configure LazyVim to load srcery
+  -- Neovim sets 'background' from the terminal's colors before config loads,
+  -- so pick srcery for dark terminals and Buttercream Diner (colors/) for light
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "srcery",
+      colorscheme = function()
+        vim.cmd.colorscheme(vim.o.background == "light" and "buttercream-diner" or "srcery")
+      end,
     },
   },
 }

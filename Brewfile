@@ -47,7 +47,7 @@ if Dir.exist?(File.expand_path("~/pco-box"))
   mas "Nordlayer", id: 1488888843
 else
   brew "ripgrep"
-  brew "colima"
-  brew "docker"
-  brew "docker-buildx"
+  # brew "colima"
+  # brew "docker"
+  # brew "docker-buildx"
 end

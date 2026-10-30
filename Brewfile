@@ -4,11 +4,9 @@ brew "jj"
 brew "neovim"
 
 brew "bat"
-brew "difftastic"
 brew "the_silver_searcher"
 brew "autojump"
 brew "eza"
-brew "aider"
 brew "jq"
 brew "lazygit"
 brew "lazydocker"
@@ -17,8 +15,6 @@ brew "direnv"
 brew "mise"
 brew "starship"
 brew "dmmulroy/tap/jj-starship"
-brew "pi-coding-agent"
-brew "termaid"
 
 if OS.mac?
   brew "mas"
@@ -28,28 +24,25 @@ if OS.mac?
   cask "hey-desktop"
   cask "ghostty"
   cask "keybase"
-  cask "slack"
   cask "raycast"
   cask "obsidian"
   cask "hyperkey"
   cask "rectangle-pro"
-  cask "rapidapi"
   cask "unifi-identity-endpoint"
   cask "tailscale-app"
   cask "mullvad-vpn"
-  cask "font-jetbrains-mono-nerd-font"
   cask "thaw"
 
   mas "Things", id: 904280696
   mas "Neptunes", id: 1006739057
   mas "iA Writer", id: 775737590
-  mas "Onigiri", id: 1639917298
 end
 
 if Dir.exist?(File.expand_path("~/pco-box"))
   cask "zoom"
   cask "tuple"
   cask "cleanshot"
+  cask "slack"
 
   mas "Nordlayer", id: 1488888843
 else
